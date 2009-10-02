@@ -91,7 +91,6 @@ DROP TABLE mtb_authority;
 DROP TABLE mtb_allowed_tag;
 DROP TABLE mtb_ownersstore_err;
 DROP TABLE mtb_ownersstore_ips;
-# CUORECUSTOMÅ@START
 DROP TABLE mtb_down;
 DROP TABLE dtb_holiday;
 DROP TABLE dtb_campaign_order;
@@ -101,4 +100,3 @@ DROP TABLE dtb_module;
 DROP TABLE dtb_session;
 DROP TABLE dtb_site_control;
 DROP TABLE dtb_trackback;
-# CUORECUSTOMÅ@END

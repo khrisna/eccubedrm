@@ -428,7 +428,7 @@ function fnDispChange(disp_id, inner_id, disp_flg){
 		document.getElementById(inner_id).innerHTML = ' <FONT Color="#FFFF99"> >> 非表示 </FONT>';
 	}
 }
-/*　CUORECUSTOM　START */
+
 //制限数判定
 function fnCheckLimit(elem1, elem2, icolor) {
 	if(document.form1[elem2]) {
@@ -443,4 +443,3 @@ function fnCheckLimit(elem1, elem2, icolor) {
 		}
 	}
 }
-/*　CUORECUSTOM　END */

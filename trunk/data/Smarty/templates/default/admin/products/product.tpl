@@ -70,9 +70,7 @@ function selectAll(target) {
                         <!--{/foreach}-->
                         <input type="hidden" name="mode" value="edit">
                         <input type="hidden" name="image_key" value="">
-<!--{* CUORECUSTOM　START *}-->
                         <input type="hidden" name="down_key" value="">
-<!--{* CUORECUSTOM　END *}-->
                         <input type="hidden" name="product_id" value="<!--{$arrForm.product_id}-->" >
                         <input type="hidden" name="product_class_id" value="<!--{$arrForm.product_class_id}-->" >
                         <input type="hidden" name="copy_product_id" value="<!--{$arrForm.copy_product_id}-->" >
@@ -145,7 +143,6 @@ function selectAll(target) {
                                         </table>
                                         </td>
                                     </tr>
-<!--{* CUORECUSTOM　START *}-->
                                     <tr>
                                         <td bgcolor="#f2f1ec" width="160" class="fs12n">実商品・ダウンロード<span class="red"> *</span></td>
                                         <td bgcolor="#ffffff" width="557" class="fs12n"><input type="radio" name="down" value="1" <!--{if $arrForm.down == "1"}-->checked<!--{/if}-->/>実商品　<input type="radio" name="down" value="2" <!--{if $arrForm.down == "2"}-->checked<!--{/if}--> />ダウンロード</td>
@@ -169,7 +166,20 @@ function selectAll(target) {
                                         <input type="button" name="btn" onclick="selectAll('category_id'); fnModeSubmit('upload_down', 'down_key', '<!--{$key}-->')" value="アップロード">
                                         </td>
                                     </tr>
-<!--{* CUORECUSTOM　END *}-->
+                                    <tr class="fs12n">
+                                        <td bgcolor="#f2f1ec" width="160">DRMコンテンツID</td>
+                                        <td bgcolor="#ffffff" width="557">
+                                        <span class="red12"><!--{$arrErr.drm_contents_id}--></span>
+                                        <input type="text" name="drm_contents_id" value="<!--{$arrForm.drm_contents_id|escape}-->" size="8" class="box8" maxlength="<!--{$smarty.const.INT_LEN}-->" style="<!--{if $arrErr.drm_contents_id != ""}-->background-color: <!--{$smarty.const.ERR_COLOR}--><!--{/if}-->"/>
+                                         </td>
+                                    </tr>
+                                    <tr class="fs12n">
+                                        <td bgcolor="#f2f1ec" width="160">DRMポリシID</td>
+                                        <td bgcolor="#ffffff" width="557">
+                                        <span class="red12"><!--{$arrErr.drm_policy_id}--></span>
+                                        <input type="text" name="drm_policy_id" value="<!--{$arrForm.drm_policy_id|escape}-->" size="8" class="box8" maxlength="<!--{$smarty.const.INT_LEN}-->" style="<!--{if $arrErr.drm_policy_id != ""}-->background-color: <!--{$smarty.const.ERR_COLOR}--><!--{/if}-->"/>
+                                         </td>
+                                    </tr>
                                     <tr>
                                         <td bgcolor="#f2f1ec" width="160" class="fs12n">公開・非公開<span class="red"> *</span></td>
                                         <td bgcolor="#ffffff" width="557" class="fs12n"><input type="radio" name="status" value="1" <!--{if $arrForm.status == "1"}-->checked<!--{/if}-->/>公開　<input type="radio" name="status" value="2" <!--{if $arrForm.status == "2"}-->checked<!--{/if}--> />非公開</td>

@@ -87,11 +87,9 @@ function lnSetSelect(form, name1, name2, val) {
         <!--{/section}-->
       </ul>
       <!--{/if}-->
-<!--{* CUORECUSTOM　START *}-->
 <!--{if $arrProduct.down == 2}-->
 		<div><font color="red">本商品はダウンロード販売となります。<br /> 購入後はMYページの購入履歴からダウンロード可能です。</font></div><br />
 <!--{/if}-->
-<!--{* CUORECUSTOM　END *}-->
       <!--★商品コード★-->
       <!--{assign var=codecnt value=$arrProductCode|@count}-->
       <!--{assign var=codemax value=`$codecnt-1`}-->

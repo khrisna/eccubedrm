@@ -105,9 +105,7 @@ class LC_Page_Admin_Basis extends LC_Page {
                 default:
                     break;
                 }
-/*　CUORECUSTOM　START */
                 $this->tpl_onload = "fnCheckLimit('downloadable_days', 'downloadable_days_unlimited', '" . DISABLED_RGB . "'); fnCheckLimit('max_download_cnt', 'download_cnt_unlimited', '" . DISABLED_RGB . "'); window.alert('SHOPマスタの登録が完了しました。');";
-/*　CUORECUSTOM　END */
             }
             if( empty($this->arrForm['regular_holiday_ids']) ) {
                 $this->arrSel = array();
@@ -122,9 +120,7 @@ class LC_Page_Admin_Basis extends LC_Page {
 
             $regular_holiday_ids = explode('|', $this->arrForm['regular_holiday_ids']);
             $this->arrForm['regular_holiday_ids'] = $regular_holiday_ids;
-/*　CUORECUSTOM　START */
             $this->tpl_onload = "fnCheckLimit('downloadable_days', 'downloadable_days_unlimited', '" . DISABLED_RGB . "'); fnCheckLimit('max_download_cnt', 'download_cnt_unlimited', '" . DISABLED_RGB . "');";
-/*　CUORECUSTOM　END */
         }
 
         $objView->assignobj($this);
@@ -168,13 +164,11 @@ class LC_Page_Admin_Basis extends LC_Page {
             "free_rule",
             "good_traded",
             "message",
-/*　CUORECUSTOM　START */
             "regular_holiday_ids",
             "downloadable_days",
             "downloadable_days_unlimited",
             "max_download_cnt",
             "download_cnt_unlimited"
-/*　CUORECUSTOM　END */
         );
         return $arrCol;
     }
@@ -243,12 +237,10 @@ class LC_Page_Admin_Basis extends LC_Page {
         $arrConvList['business_hour'] = "KVa";
         $arrConvList['good_traded'] = "";
         $arrConvList['message'] = "";
-/*　CUORECUSTOM　START */
         $arrConvList['downloadable_days'] = "n";
         $arrConvList['downloadable_days_unlimited'] = "n";
         $arrConvList['max_download_cnt'] = "n";
         $arrConvList['download_cnt_unlimited'] = "n";
-/*　CUORECUSTOM　END */
 
         return SC_Utils_Ex::mbConvertKanaWithArray($array, $arrConvList);
     }
@@ -284,14 +276,12 @@ class LC_Page_Admin_Basis extends LC_Page {
 
         $objErr->doFunc(array("取扱商品", "good_traded", LLTEXT_LEN), array("MAX_LENGTH_CHECK"));
         $objErr->doFunc(array("メッセージ", "message", LLTEXT_LEN), array("MAX_LENGTH_CHECK"));
-/*　CUORECUSTOM　START */
         if(!isset($array['downloadable_days_unlimited']) && $array['downloadable_days_unlimited'] != "1") {
         	$objErr->doFunc(array("ダウンロード可能日数", "downloadable_days", DOWNLOAD_DAYS_LEN), array("EXIST_CHECK", "ZERO_CHECK", "NUM_CHECK", "MAX_LENGTH_CHECK"));
         }
         if(!isset($array['download_cnt_unlimited']) && $array['download_cnt_unlimited'] != "1") {
         	$objErr->doFunc(array("ダウンロード最大回数", "max_download_cnt", DOWNLOAD_CNT_LEN), array("EXIST_CHECK", "ZERO_CHECK", "NUM_CHECK", "MAX_LENGTH_CHECK"));
         }
-/*　CUORECUSTOM　END */
         return $objErr->arrErr;
     }
 }

@@ -1,691 +1,689 @@
 <?php
-/** ƒtƒƒ“ƒg•\Ž¦ŠÖ˜A */
-define('SAMPLE_ADDRESS1', "Žs‹æ’¬‘º–¼i—áFç‘ã“c‹æ_“c_•Û’¬j");
-/** ƒtƒƒ“ƒg•\Ž¦ŠÖ˜A */
-define('SAMPLE_ADDRESS2', "”Ô’nEƒrƒ‹–¼i—áF1-3-5j");
-/** ƒ†[ƒUƒtƒ@ƒCƒ‹•Û‘¶æ */
+/** ãƒ•ãƒ­ãƒ³ãƒˆè¡¨ç¤ºé–¢é€£ */
+define('SAMPLE_ADDRESS1', "å¸‚åŒºç”ºæ‘åï¼ˆä¾‹ï¼šåƒä»£ç”°åŒºç¥žç”°ç¥žä¿ç”ºï¼‰");
+/** ãƒ•ãƒ­ãƒ³ãƒˆè¡¨ç¤ºé–¢é€£ */
+define('SAMPLE_ADDRESS2', "ç•ªåœ°ãƒ»ãƒ“ãƒ«åï¼ˆä¾‹ï¼š1-3-5ï¼‰");
+/** ãƒ¦ãƒ¼ã‚¶ãƒ•ã‚¡ã‚¤ãƒ«ä¿å­˜å…ˆ */
 define('USER_DIR', "user_data/");
-/** ƒ†[ƒUƒtƒ@ƒCƒ‹•Û‘¶æ */
+/** ãƒ¦ãƒ¼ã‚¶ãƒ•ã‚¡ã‚¤ãƒ«ä¿å­˜å…ˆ */
 define('USER_PATH', HTML_PATH . USER_DIR);
-/** ƒ†[ƒUƒCƒ“ƒNƒ‹[ƒhƒtƒ@ƒCƒ‹•Û‘¶æ */
+/** ãƒ¦ãƒ¼ã‚¶ã‚¤ãƒ³ã‚¯ãƒ«ãƒ¼ãƒ‰ãƒ•ã‚¡ã‚¤ãƒ«ä¿å­˜å…ˆ */
 define('USER_INC_PATH', USER_PATH . "include/");
-/** DBƒGƒ‰[ƒ[ƒ‹‘—Mæ */
+/** DBã‚¨ãƒ©ãƒ¼ãƒ¡ãƒ¼ãƒ«é€ä¿¡å…ˆ */
 define('DB_ERROR_MAIL_TO', "");
-/** DBƒGƒ‰[ƒ[ƒ‹Œ–¼ */
+/** DBã‚¨ãƒ©ãƒ¼ãƒ¡ãƒ¼ãƒ«ä»¶å */
 define('DB_ERROR_MAIL_SUBJECT', "OS_TEST_ERROR");
-/** —X•Ö”Ô†ê—pDB */
+/** éƒµä¾¿ç•ªå·å°‚ç”¨DB */
 define('ZIP_DSN', DEFAULT_DSN);
-/** ƒ†[ƒU[ì¬ƒy[ƒW“™ */
+/** ãƒ¦ãƒ¼ã‚¶ãƒ¼ä½œæˆãƒšãƒ¼ã‚¸ç­‰ */
 define('USER_URL', SITE_URL . USER_DIR);
-/** ”FØ—p magic */
+/** èªè¨¼ç”¨ magic */
 define('AUTH_MAGIC', "31eafcbd7a81d7b401a7fdc12bba047c02d1fae6");
-/** ƒeƒ“ƒvƒŒ[ƒgƒtƒ@ƒCƒ‹•Û‘¶æ */
+/** ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆãƒ•ã‚¡ã‚¤ãƒ«ä¿å­˜å…ˆ */
 define('USER_TEMPLATE_DIR', "templates/");
-/** ƒeƒ“ƒvƒŒ[ƒgƒtƒ@ƒCƒ‹•Û‘¶æ */
+/** ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆãƒ•ã‚¡ã‚¤ãƒ«ä¿å­˜å…ˆ */
 define('USER_PACKAGE_DIR', "packages/");
-/** ƒeƒ“ƒvƒŒ[ƒgƒtƒ@ƒCƒ‹•Û‘¶æ */
+/** ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆãƒ•ã‚¡ã‚¤ãƒ«ä¿å­˜å…ˆ */
 define('USER_TEMPLATE_PATH', USER_PATH . USER_PACKAGE_DIR);
-/** ƒeƒ“ƒvƒŒ[ƒgƒtƒ@ƒCƒ‹ˆêŽž•Û‘¶æ */
+/** ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆãƒ•ã‚¡ã‚¤ãƒ«ä¸€æ™‚ä¿å­˜å…ˆ */
 define('TEMPLATE_TEMP_DIR', HTML_PATH . "upload/temp_template/");
-/** ƒ†[ƒU[ì¬‰æ–Ê‚ÌƒfƒtƒHƒ‹ƒgPHPƒtƒ@ƒCƒ‹ */
+/** ãƒ¦ãƒ¼ã‚¶ãƒ¼ä½œæˆç”»é¢ã®ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆPHPãƒ•ã‚¡ã‚¤ãƒ« */
 define('USER_DEF_PHP', HTML_PATH . "__default.php");
-/** ‚»‚Ì‘¼‰æ–Ê‚ÌƒfƒtƒHƒ‹ƒgƒy[ƒWƒŒƒCƒAƒEƒg */
+/** ãã®ä»–ç”»é¢ã®ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆãƒšãƒ¼ã‚¸ãƒ¬ã‚¤ã‚¢ã‚¦ãƒˆ */
 define('DEF_LAYOUT', "products/list.php");
-/** ƒ_ƒEƒ“ƒ[ƒhƒ‚ƒWƒ…[ƒ‹•Û‘¶ƒfƒBƒŒƒNƒgƒŠ */
+/** ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ä¿å­˜ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª */
 define('MODULE_DIR', "downloads/module/");
-/** ƒ_ƒEƒ“ƒ[ƒhƒ‚ƒWƒ…[ƒ‹•Û‘¶ƒfƒBƒŒƒNƒgƒŠ */
+/** ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ä¿å­˜ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª */
 define('MODULE_PATH', DATA_PATH . MODULE_DIR);
-/** HotFix•Û‘¶ƒfƒBƒŒƒNƒgƒŠ */
+/** HotFixä¿å­˜ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª */
 define('UPDATE_DIR', "downloads/update/");
-/** HotFix•Û‘¶ƒfƒBƒŒƒNƒgƒŠ */
+/** HotFixä¿å­˜ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª */
 define('UPDATE_PATH', DATA_PATH . UPDATE_DIR);
-/** DBƒZƒbƒVƒ‡ƒ“‚Ì—LŒøŠúŒÀ(•b) */
+/** DBã‚»ãƒƒã‚·ãƒ§ãƒ³ã®æœ‰åŠ¹æœŸé™(ç§’) */
 define('MAX_LIFETIME', 7200);
-/** ƒ}ƒXƒ^ƒf[ƒ^ƒLƒƒƒbƒVƒ…ƒfƒBƒŒƒNƒgƒŠ */
+/** ãƒžã‚¹ã‚¿ãƒ‡ãƒ¼ã‚¿ã‚­ãƒ£ãƒƒã‚·ãƒ¥ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª */
 define('MASTER_DATA_DIR', DATA_PATH . "cache/");
-/** ƒAƒbƒvƒf[ƒgŠÇ——pƒtƒ@ƒCƒ‹Ši”[êŠ */
+/** ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆç®¡ç†ç”¨ãƒ•ã‚¡ã‚¤ãƒ«æ ¼ç´å ´æ‰€ */
 define('UPDATE_HTTP', "http://sv01.ec-cube.net/info/index.php");
-/** ƒAƒbƒvƒf[ƒgŠÇ——pCSV1s•Ó‚è‚ÌÅ‘å•¶Žš” */
+/** ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆç®¡ç†ç”¨CSV1è¡Œè¾ºã‚Šã®æœ€å¤§æ–‡å­—æ•° */
 define('UPDATE_CSV_LINE_MAX', 4096);
-/** ƒAƒbƒvƒf[ƒgŠÇ——pCSVƒJƒ‰ƒ€” */
+/** ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆç®¡ç†ç”¨CSVã‚«ãƒ©ãƒ æ•° */
 define('UPDATE_CSV_COL_MAX', 13);
-/** ƒ‚ƒWƒ…[ƒ‹ŠÇ——pCSVƒJƒ‰ƒ€” */
+/** ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ç®¡ç†ç”¨CSVã‚«ãƒ©ãƒ æ•° */
 define('MODULE_CSV_COL_MAX', 16);
-/** ¤•iw“üŠ®—¹ */
+/** å•†å“è³¼å…¥å®Œäº† */
 define('AFF_SHOPPING_COMPLETE', 1);
-/** ƒ†[ƒU“o˜^Š®—¹ */
+/** ãƒ¦ãƒ¼ã‚¶ç™»éŒ²å®Œäº† */
 define('AFF_ENTRY_COMPLETE', 2);
-/** •¶ŽšƒR[ƒh */
+/** æ–‡å­—ã‚³ãƒ¼ãƒ‰ */
 define('CHAR_CODE', "UTF-8");
-/** ƒƒP[ƒ‹Ý’è */
+/** ãƒ­ã‚±ãƒ¼ãƒ«è¨­å®š */
 define('LOCALE', "ja_JP.UTF-8");
-/** ŒˆÏƒ‚ƒWƒ…[ƒ‹•t—^•¶Œ¾ */
+/** æ±ºæ¸ˆãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ä»˜ä¸Žæ–‡è¨€ */
 define('ECCUBE_PAYMENT', "EC-CUBE");
-/** PEAR::DB‚ÌƒfƒoƒbƒOƒ‚[ƒh */
+/** PEAR::DBã®ãƒ‡ãƒãƒƒã‚°ãƒ¢ãƒ¼ãƒ‰ */
 define('PEAR_DB_DEBUG', 9);
-/** PEAR::DB‚ÌŽ‘±“IÚ‘±ƒIƒvƒVƒ‡ƒ“ */
+/** PEAR::DBã®æŒç¶šçš„æŽ¥ç¶šã‚ªãƒ—ã‚·ãƒ§ãƒ³ */
 define('PEAR_DB_PERSISTENT', false);
-/** ƒoƒbƒ`‚ðŽÀs‚·‚éÅ’Z‚ÌŠÔŠu(•b) */
+/** ãƒãƒƒãƒã‚’å®Ÿè¡Œã™ã‚‹æœ€çŸ­ã®é–“éš”(ç§’) */
 define('LOAD_BATCH_PASS', 3600);
-/** ’÷‚ß“ú‚ÌŽw’è(––“ú‚Ìê‡‚ÍA31‚ðŽw’è‚µ‚Ä‚­‚¾‚³‚¢B) */
+/** ç· ã‚æ—¥ã®æŒ‡å®š(æœ«æ—¥ã®å ´åˆã¯ã€31ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚) */
 define('CLOSE_DAY', 31);
-/** ˆê”ÊƒTƒCƒgƒGƒ‰[ */
+/** ä¸€èˆ¬ã‚µã‚¤ãƒˆã‚¨ãƒ©ãƒ¼ */
 define('FAVORITE_ERROR', 13);
-/** ƒ‰ƒCƒuƒ‰ƒŠ‚ÌƒpƒX */
+/** ãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®ãƒ‘ã‚¹ */
 define('LIB_DIR', DATA_PATH . "lib/");
-/** ƒtƒHƒ“ƒg‚ÌƒpƒX */
+/** ãƒ•ã‚©ãƒ³ãƒˆã®ãƒ‘ã‚¹ */
 define('TTF_DIR', DATA_PATH . "fonts/");
-/** ƒOƒ‰ƒtŠi”[ƒfƒBƒŒƒNƒgƒŠ */
+/** ã‚°ãƒ©ãƒ•æ ¼ç´ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª */
 define('GRAPH_DIR', HTML_PATH . "upload/graph_image/");
-/** ƒOƒ‰ƒtURL */
+/** ã‚°ãƒ©ãƒ•URL */
 define('GRAPH_URL', URL_DIR . "upload/graph_image/");
-/** ‰~ƒOƒ‰ƒtÅ‘å•\Ž¦” */
+/** å††ã‚°ãƒ©ãƒ•æœ€å¤§è¡¨ç¤ºæ•° */
 define('GRAPH_PIE_MAX', 10);
-/** ƒOƒ‰ƒt‚Ìƒ‰ƒxƒ‹‚Ì•¶Žš” */
+/** ã‚°ãƒ©ãƒ•ã®ãƒ©ãƒ™ãƒ«ã®æ–‡å­—æ•° */
 define('GRAPH_LABEL_MAX', 40);
-/** PDFŠi”[ƒfƒBƒŒƒNƒgƒŠ */
+/** PDFæ ¼ç´ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª */
 define('PDF_DIR', DATA_PATH . "pdf/");
-/** ‰½Î‚Ü‚ÅWŒv‚Ì‘ÎÛ‚Æ‚·‚é‚© */
+/** ä½•æ­³ã¾ã§é›†è¨ˆã®å¯¾è±¡ã¨ã™ã‚‹ã‹ */
 define('BAT_ORDER_AGE', 70);
-/** ¤•iWŒv‚Å‰½ˆÊ‚Ü‚Å•\Ž¦‚·‚é‚© */
+/** å•†å“é›†è¨ˆã§ä½•ä½ã¾ã§è¡¨ç¤ºã™ã‚‹ã‹ */
 define('PRODUCTS_TOTAL_MAX', 15);
-/** 1:ŒöŠJ 2:”ñŒöŠJ */
+/** 1:å…¬é–‹ 2:éžå…¬é–‹ */
 define('DEFAULT_PRODUCT_DISP', 2);
-/** ‘——¿–³—¿w“üŒÂ”i0‚Ìê‡‚ÍA‰½ŒÂ”ƒ‚Á‚Ä‚à–³—¿‚É‚È‚ç‚È‚¢) */
+/** é€æ–™ç„¡æ–™è³¼å…¥å€‹æ•°ï¼ˆ0ã®å ´åˆã¯ã€ä½•å€‹è²·ã£ã¦ã‚‚ç„¡æ–™ã«ãªã‚‰ãªã„) */
 define('DELIV_FREE_AMOUNT', 0);
-/** ”z‘——¿‚ÌÝ’è‰æ–Ê•\Ž¦(—LŒø:1 –³Œø:0) */
+/** é…é€æ–™ã®è¨­å®šç”»é¢è¡¨ç¤º(æœ‰åŠ¹:1 ç„¡åŠ¹:0) */
 define('INPUT_DELIV_FEE', 1);
-/** ¤•i‚²‚Æ‚Ì‘——¿Ý’è(—LŒø:1 –³Œø:0) */
+/** å•†å“ã”ã¨ã®é€æ–™è¨­å®š(æœ‰åŠ¹:1 ç„¡åŠ¹:0) */
 define('OPTION_PRODUCT_DELIV_FEE', 0);
-/** ”z‘—‹ÆŽÒ‚²‚Æ‚Ì”z‘——¿‚ð‰ÁŽZ‚·‚é(—LŒø:1 –³Œø:0) */
+/** é…é€æ¥­è€…ã”ã¨ã®é…é€æ–™ã‚’åŠ ç®—ã™ã‚‹(æœ‰åŠ¹:1 ç„¡åŠ¹:0) */
 define('OPTION_DELIV_FEE', 1);
-/** ‚¨‚·‚·‚ß¤•i“o˜^(—LŒø:1 –³Œø:0) */
+/** ãŠã™ã™ã‚å•†å“ç™»éŒ²(æœ‰åŠ¹:1 ç„¡åŠ¹:0) */
 define('OPTION_RECOMMEND', 1);
-/** ¤•i‹KŠi“o˜^(—LŒø:1 –³Œø:0) */
+/** å•†å“è¦æ ¼ç™»éŒ²(æœ‰åŠ¹:1 ç„¡åŠ¹:0) */
 define('OPTION_CLASS_REGIST', 1);
-/** TV˜A“®¤•i‰æ‘œ‰¡ */
+/** TVé€£å‹•å•†å“ç”»åƒæ¨ª */
 define('TV_IMAGE_WIDTH', 170);
-/** TV˜A“®¤•i‰æ‘œc */
+/** TVé€£å‹•å•†å“ç”»åƒç¸¦ */
 define('TV_IMAGE_HEIGHT', 95);
-/** TV˜A“®¤•iÅ‘å“o˜^” */
+/** TVé€£å‹•å•†å“æœ€å¤§ç™»éŒ²æ•° */
 define('TV_PRODUCTS_MAX', 10);
-/** ‰ïˆõ“o˜^•ÏX(ƒ}ƒCƒy[ƒW)ƒpƒXƒ[ƒh—p */
+/** ä¼šå“¡ç™»éŒ²å¤‰æ›´(ãƒžã‚¤ãƒšãƒ¼ã‚¸)ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ç”¨ */
 define('DEFAULT_PASSWORD', "UAhgGR3L");
-/** ‚¨‚·‚·‚ß¤•i” */
+/** ãŠã™ã™ã‚å•†å“æ•° */
 define('RECOMMEND_PRODUCT_MAX', 6);
-/** •Ê‚Ì‚¨“Í‚¯æÅ‘å“o˜^” */
+/** åˆ¥ã®ãŠå±Šã‘å…ˆæœ€å¤§ç™»éŒ²æ•° */
 define('DELIV_ADDR_MAX', 20);
-/** ‰{———š—ð•Û‘¶” */
+/** é–²è¦§å±¥æ­´ä¿å­˜æ•° */
 define('CUSTOMER_READING_MAX', 30);
-/** ŠÇ—‰æ–ÊƒXƒe[ƒ^ƒXˆê——•\Ž¦Œ” */
+/** ç®¡ç†ç”»é¢ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ä¸€è¦§è¡¨ç¤ºä»¶æ•° */
 define('ORDER_STATUS_MAX', 50);
-/** ƒtƒƒ“ƒgƒŒƒrƒ…[‘‚«ž‚ÝÅ‘å” */
+/** ãƒ•ãƒ­ãƒ³ãƒˆãƒ¬ãƒ“ãƒ¥ãƒ¼æ›¸ãè¾¼ã¿æœ€å¤§æ•° */
 define('REVIEW_REGIST_MAX', 5);
-/** ƒfƒoƒbƒOƒ‚[ƒh(trueFsfPrintR‚âDB‚ÌƒGƒ‰[ƒƒbƒZ[ƒW‚ðo—Í‚·‚éAfalseFo—Í‚µ‚È‚¢) */
+/** ãƒ‡ãƒãƒƒã‚°ãƒ¢ãƒ¼ãƒ‰(trueï¼šsfPrintRã‚„DBã®ã‚¨ãƒ©ãƒ¼ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å‡ºåŠ›ã™ã‚‹ã€falseï¼šå‡ºåŠ›ã—ãªã„) */
 define('DEBUG_MODE', false);
-/** ŠÇ—ƒ†[ƒUID(ƒƒ“ƒeƒiƒ“ƒX—p•\Ž¦‚³‚ê‚È‚¢B) */
+/** ç®¡ç†ãƒ¦ãƒ¼ã‚¶ID(ãƒ¡ãƒ³ãƒ†ãƒŠãƒ³ã‚¹ç”¨è¡¨ç¤ºã•ã‚Œãªã„ã€‚) */
 define('ADMIN_ID', "1");
-/** ‰ïˆõ“o˜^Žž‚É‰¼‰ïˆõŠm”Fƒ[ƒ‹‚ð‘—M‚·‚é‚©itrue:‰¼‰ïˆõAfalse:–{‰ïˆõj */
+/** ä¼šå“¡ç™»éŒ²æ™‚ã«ä»®ä¼šå“¡ç¢ºèªãƒ¡ãƒ¼ãƒ«ã‚’é€ä¿¡ã™ã‚‹ã‹ï¼ˆtrue:ä»®ä¼šå“¡ã€false:æœ¬ä¼šå“¡ï¼‰ */
 define('CUSTOMER_CONFIRM_MAIL', false);
-/** ƒƒ‹ƒ}ƒK”zM—}§(false:OFFAtrue:ON) */
+/** ãƒ¡ãƒ«ãƒžã‚¬é…ä¿¡æŠ‘åˆ¶(false:OFFã€true:ON) */
 define('MELMAGA_SEND', true);
-/** ƒƒCƒ‹ƒ}ƒKƒWƒ“ƒoƒbƒ`ƒ‚[ƒh(true:ƒoƒbƒ`‚Å‘—M‚·‚é ¦—vcronÝ’èAfalse:ƒŠƒAƒ‹ƒ^ƒCƒ€‚Å‘—M‚·‚é) */
+/** ãƒ¡ã‚¤ãƒ«ãƒžã‚¬ã‚¸ãƒ³ãƒãƒƒãƒãƒ¢ãƒ¼ãƒ‰(true:ãƒãƒƒãƒã§é€ä¿¡ã™ã‚‹ â€»è¦cronè¨­å®šã€false:ãƒªã‚¢ãƒ«ã‚¿ã‚¤ãƒ ã§é€ä¿¡ã™ã‚‹) */
 define('MELMAGA_BATCH_MODE', false);
-/** ƒƒOƒCƒ“‰æ–ÊƒtƒŒ[ƒ€ */
+/** ãƒ­ã‚°ã‚¤ãƒ³ç”»é¢ãƒ•ãƒ¬ãƒ¼ãƒ  */
 define('LOGIN_FRAME', "login_frame.tpl");
-/** ŠÇ—‰æ–ÊƒtƒŒ[ƒ€ */
+/** ç®¡ç†ç”»é¢ãƒ•ãƒ¬ãƒ¼ãƒ  */
 define('MAIN_FRAME', "main_frame.tpl");
-/** ˆê”ÊƒTƒCƒg‰æ–ÊƒtƒŒ[ƒ€ */
+/** ä¸€èˆ¬ã‚µã‚¤ãƒˆç”»é¢ãƒ•ãƒ¬ãƒ¼ãƒ  */
 define('SITE_FRAME', "site_frame.tpl");
-/** ”FØ•¶Žš—ñ */
+/** èªè¨¼æ–‡å­—åˆ— */
 define('CERT_STRING', "7WDhcBTF");
-/** ƒ_ƒ~[ƒpƒXƒ[ƒh */
+/** ãƒ€ãƒŸãƒ¼ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ */
 define('DUMMY_PASS', "########");
-/** ÝŒÉ”A”Ì”„§ŒÀ–³ŒÀ‚ðŽ¦‚·B */
+/** åœ¨åº«æ•°ã€è²©å£²åˆ¶é™ç„¡é™ã‚’ç¤ºã™ã€‚ */
 define('UNLIMITED', "++");
-/** ¶”NŒŽ“ú“o˜^ŠJŽn”N */
+/** ç”Ÿå¹´æœˆæ—¥ç™»éŒ²é–‹å§‹å¹´ */
 define('BIRTH_YEAR', 1901);
-/** –{ƒVƒXƒeƒ€‚Ì‰Ò“­ŠJŽn”N */
+/** æœ¬ã‚·ã‚¹ãƒ†ãƒ ã®ç¨¼åƒé–‹å§‹å¹´ */
 define('RELEASE_YEAR', 2005);
-/** ƒNƒŒƒWƒbƒgƒJ[ƒh‚ÌŠúŒÀ{‰½”N */
+/** ã‚¯ãƒ¬ã‚¸ãƒƒãƒˆã‚«ãƒ¼ãƒ‰ã®æœŸé™ï¼‹ä½•å¹´ */
 define('CREDIT_ADD_YEAR', 10);
-/** eƒJƒeƒSƒŠ‚ÌƒJƒeƒSƒŠID‚ÌÅ‘å”i‚±‚êˆÈ‰º‚ÍeƒJƒeƒSƒŠ‚Æ‚·‚éB) */
+/** è¦ªã‚«ãƒ†ã‚´ãƒªã®ã‚«ãƒ†ã‚´ãƒªIDã®æœ€å¤§æ•°ï¼ˆã“ã‚Œä»¥ä¸‹ã¯è¦ªã‚«ãƒ†ã‚´ãƒªã¨ã™ã‚‹ã€‚) */
 define('PARENT_CAT_MAX', 12);
-/** GET’l•ÏX‚È‚Ç‚Ì‚¢‚½‚¸‚ç‚ð–h‚®‚½‚ßÅ‘å”§ŒÀ‚ðÝ‚¯‚éB */
+/** GETå€¤å¤‰æ›´ãªã©ã®ã„ãŸãšã‚‰ã‚’é˜²ããŸã‚æœ€å¤§æ•°åˆ¶é™ã‚’è¨­ã‘ã‚‹ã€‚ */
 define('NUMBER_MAX', 1000000000);
-/** ƒ|ƒCƒ“ƒg‚ÌŒvŽZƒ‹[ƒ‹(1:ŽlŽÌŒÜ“üA2:Ø‚èŽÌ‚ÄA3:Ø‚èã‚°) */
+/** ãƒã‚¤ãƒ³ãƒˆã®è¨ˆç®—ãƒ«ãƒ¼ãƒ«(1:å››æ¨äº”å…¥ã€2:åˆ‡ã‚Šæ¨ã¦ã€3:åˆ‡ã‚Šä¸Šã’) */
 define('POINT_RULE', 2);
-/** 1ƒ|ƒCƒ“ƒg“–‚½‚è‚Ì’l’i(‰~) */
+/** 1ãƒã‚¤ãƒ³ãƒˆå½“ãŸã‚Šã®å€¤æ®µ(å††) */
 define('POINT_VALUE', 1);
-/** ŠÇ—ƒ‚[ƒh 1:—LŒø@0:–³Œø(”[•iŽž) */
+/** ç®¡ç†ãƒ¢ãƒ¼ãƒ‰ 1:æœ‰åŠ¹ã€€0:ç„¡åŠ¹(ç´å“æ™‚) */
 define('ADMIN_MODE', 0);
-/** ”„ãWŒvƒoƒbƒ`ƒ‚[ƒh(true:ƒoƒbƒ`‚ÅWŒv‚·‚é ¦—vcronÝ’èAfalse:ƒŠƒAƒ‹ƒ^ƒCƒ€‚ÅWŒv‚·‚é) */
+/** å£²ä¸Šé›†è¨ˆãƒãƒƒãƒãƒ¢ãƒ¼ãƒ‰(true:ãƒãƒƒãƒã§é›†è¨ˆã™ã‚‹ â€»è¦cronè¨­å®šã€false:ãƒªã‚¢ãƒ«ã‚¿ã‚¤ãƒ ã§é›†è¨ˆã™ã‚‹) */
 define('DAILY_BATCH_MODE', false);
-/** ƒƒOƒtƒ@ƒCƒ‹Å‘å”(ƒƒOƒe[ƒVƒ‡ƒ“) */
+/** ãƒ­ã‚°ãƒ•ã‚¡ã‚¤ãƒ«æœ€å¤§æ•°(ãƒ­ã‚°ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³) */
 define('MAX_LOG_QUANTITY', 5);
-/** 1‚Â‚ÌƒƒOƒtƒ@ƒCƒ‹‚É•Û‘¶‚·‚éÅ‘å—e—Ê(byte) */
+/** 1ã¤ã®ãƒ­ã‚°ãƒ•ã‚¡ã‚¤ãƒ«ã«ä¿å­˜ã™ã‚‹æœ€å¤§å®¹é‡(byte) */
 define('MAX_LOG_SIZE', "1000000");
-/** ƒgƒ‰ƒ“ƒUƒNƒVƒ‡ƒ“ID ‚Ì–¼‘O */
+/** ãƒˆãƒ©ãƒ³ã‚¶ã‚¯ã‚·ãƒ§ãƒ³ID ã®åå‰ */
 define('TRANSACTION_ID_NAME', "transactionid");
-/** ƒpƒXƒ[ƒh–Y‚ê‚ÌŠm”Fƒ[ƒ‹‚ð‘—•t‚·‚é‚©”Û‚©B(0:‘—M‚µ‚È‚¢A1:‘—M‚·‚é) */
+/** ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰å¿˜ã‚Œã®ç¢ºèªãƒ¡ãƒ¼ãƒ«ã‚’é€ä»˜ã™ã‚‹ã‹å¦ã‹ã€‚(0:é€ä¿¡ã—ãªã„ã€1:é€ä¿¡ã™ã‚‹) */
 define('FORGOT_MAIL', 0);
-/** “o˜^‚Å‚«‚éƒTƒu¤•i‚Ì” */
+/** ç™»éŒ²ã§ãã‚‹ã‚µãƒ–å•†å“ã®æ•° */
 define('HTML_TEMPLATE_SUB_MAX', 12);
-/** •¶Žš”‚ª‘½‚·‚¬‚é‚Æ‚«‚É‹­§‰üs‚·‚éƒTƒCƒY(”¼Šp) */
+/** æ–‡å­—æ•°ãŒå¤šã™ãŽã‚‹ã¨ãã«å¼·åˆ¶æ”¹è¡Œã™ã‚‹ã‚µã‚¤ã‚º(åŠè§’) */
 define('LINE_LIMIT_SIZE', 60);
-/** ’a¶“úŒŽƒ|ƒCƒ“ƒg */
+/** èª•ç”Ÿæ—¥æœˆãƒã‚¤ãƒ³ãƒˆ */
 define('BIRTH_MONTH_POINT', 0);
-/** ƒ‹[ƒgƒJƒeƒSƒŠID */
+/** ãƒ«ãƒ¼ãƒˆã‚«ãƒ†ã‚´ãƒªID */
 define('ROOT_CATEGORY_1', 2);
-/** ƒ‹[ƒgƒJƒeƒSƒŠID */
+/** ãƒ«ãƒ¼ãƒˆã‚«ãƒ†ã‚´ãƒªID */
 define('ROOT_CATEGORY_2', 3);
-/** ƒ‹[ƒgƒJƒeƒSƒŠID */
+/** ãƒ«ãƒ¼ãƒˆã‚«ãƒ†ã‚´ãƒªID */
 define('ROOT_CATEGORY_3', 4);
-/** ƒ‹[ƒgƒJƒeƒSƒŠID */
+/** ãƒ«ãƒ¼ãƒˆã‚«ãƒ†ã‚´ãƒªID */
 define('ROOT_CATEGORY_4', 5);
-/** ƒ‹[ƒgƒJƒeƒSƒŠID */
+/** ãƒ«ãƒ¼ãƒˆã‚«ãƒ†ã‚´ãƒªID */
 define('ROOT_CATEGORY_5', 6);
-/** ƒ‹[ƒgƒJƒeƒSƒŠID */
+/** ãƒ«ãƒ¼ãƒˆã‚«ãƒ†ã‚´ãƒªID */
 define('ROOT_CATEGORY_6', 7);
-/** ƒ‹[ƒgƒJƒeƒSƒŠID */
+/** ãƒ«ãƒ¼ãƒˆã‚«ãƒ†ã‚´ãƒªID */
 define('ROOT_CATEGORY_7', 8);
-/** ƒNƒŒƒWƒbƒgƒJ[ƒh */
+/** ã‚¯ãƒ¬ã‚¸ãƒƒãƒˆã‚«ãƒ¼ãƒ‰ */
 define('PAYMENT_CREDIT_ID', 1);
-/** ƒRƒ“ƒrƒjŒˆÏ */
+/** ã‚³ãƒ³ãƒ“ãƒ‹æ±ºæ¸ˆ */
 define('PAYMENT_CONVENIENCE_ID', 2);
-/** Šg‘å‰æ‘œ‰¡ */
+/** æ‹¡å¤§ç”»åƒæ¨ª */
 define('LARGE_IMAGE_WIDTH', 500);
-/** Šg‘å‰æ‘œc */
+/** æ‹¡å¤§ç”»åƒç¸¦ */
 define('LARGE_IMAGE_HEIGHT', 500);
-/** ˆê——‰æ‘œ‰¡ */
+/** ä¸€è¦§ç”»åƒæ¨ª */
 define('SMALL_IMAGE_WIDTH', 130);
-/** ˆê——‰æ‘œc */
+/** ä¸€è¦§ç”»åƒç¸¦ */
 define('SMALL_IMAGE_HEIGHT', 130);
-/** ’Êí‰æ‘œ‰¡ */
+/** é€šå¸¸ç”»åƒæ¨ª */
 define('NORMAL_IMAGE_WIDTH', 260);
-/** ’Êí‰æ‘œc */
+/** é€šå¸¸ç”»åƒç¸¦ */
 define('NORMAL_IMAGE_HEIGHT', 260);
-/** ’ÊíƒTƒu‰æ‘œ‰¡ */
+/** é€šå¸¸ã‚µãƒ–ç”»åƒæ¨ª */
 define('NORMAL_SUBIMAGE_WIDTH', 200);
-/** ’ÊíƒTƒu‰æ‘œc */
+/** é€šå¸¸ã‚µãƒ–ç”»åƒç¸¦ */
 define('NORMAL_SUBIMAGE_HEIGHT', 200);
-/** Šg‘åƒTƒu‰æ‘œ‰¡ */
+/** æ‹¡å¤§ã‚µãƒ–ç”»åƒæ¨ª */
 define('LARGE_SUBIMAGE_WIDTH', 500);
-/** Šg‘åƒTƒu‰æ‘œc */
+/** æ‹¡å¤§ã‚µãƒ–ç”»åƒç¸¦ */
 define('LARGE_SUBIMAGE_HEIGHT', 500);
-/** ˆê——•\Ž¦‰æ‘œ‰¡ */
+/** ä¸€è¦§è¡¨ç¤ºç”»åƒæ¨ª */
 define('DISP_IMAGE_WIDTH', 65);
-/** ˆê——•\Ž¦‰æ‘œc */
+/** ä¸€è¦§è¡¨ç¤ºç”»åƒç¸¦ */
 define('DISP_IMAGE_HEIGHT', 65);
-/** ‚»‚Ì‘¼‚Ì‰æ‘œ1 */
+/** ãã®ä»–ã®ç”»åƒ1 */
 define('OTHER_IMAGE1_WIDTH', 500);
-/** ‚»‚Ì‘¼‚Ì‰æ‘œ1 */
+/** ãã®ä»–ã®ç”»åƒ1 */
 define('OTHER_IMAGE1_HEIGHT', 500);
-/** HTMLƒ[ƒ‹ƒeƒ“ƒvƒŒ[ƒgƒ[ƒ‹’S“–‰æ‘œ‰¡ */
+/** HTMLãƒ¡ãƒ¼ãƒ«ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆãƒ¡ãƒ¼ãƒ«æ‹…å½“ç”»åƒæ¨ª */
 define('HTMLMAIL_IMAGE_WIDTH', 110);
-/** HTMLƒ[ƒ‹ƒeƒ“ƒvƒŒ[ƒgƒ[ƒ‹’S“–‰æ‘œc */
+/** HTMLãƒ¡ãƒ¼ãƒ«ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆãƒ¡ãƒ¼ãƒ«æ‹…å½“ç”»åƒç¸¦ */
 define('HTMLMAIL_IMAGE_HEIGHT', 120);
-/** ‰æ‘œƒTƒCƒY§ŒÀ(KB) */
+/** ç”»åƒã‚µã‚¤ã‚ºåˆ¶é™(KB) */
 define('IMAGE_SIZE', 1000);
-/** CSVƒTƒCƒY§ŒÀ(KB) */
+/** CSVã‚µã‚¤ã‚ºåˆ¶é™(KB) */
 define('CSV_SIZE', 2000);
-/** CSVƒAƒbƒvƒ[ƒh1s‚ ‚½‚è‚ÌÅ‘å•¶Žš” */
+/** CSVã‚¢ãƒƒãƒ—ãƒ­ãƒ¼ãƒ‰1è¡Œã‚ãŸã‚Šã®æœ€å¤§æ–‡å­—æ•° */
 define('CSV_LINE_MAX', 10000);
-/** PDFƒTƒCƒY§ŒÀ(KB):¤•iÚ×ƒtƒ@ƒCƒ‹“™ */
+/** PDFã‚µã‚¤ã‚ºåˆ¶é™(KB):å•†å“è©³ç´°ãƒ•ã‚¡ã‚¤ãƒ«ç­‰ */
 define('PDF_SIZE', 5000);
-/** ƒtƒ@ƒCƒ‹ŠÇ—‰æ–ÊƒAƒbƒv§ŒÀ(KB) */
+/** ãƒ•ã‚¡ã‚¤ãƒ«ç®¡ç†ç”»é¢ã‚¢ãƒƒãƒ—åˆ¶é™(KB) */
 define('FILE_SIZE', 10000);
-/** ƒAƒbƒv‚Å‚«‚éƒeƒ“ƒvƒŒ[ƒgƒtƒ@ƒCƒ‹§ŒÀ(KB) */
+/** ã‚¢ãƒƒãƒ—ã§ãã‚‹ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆãƒ•ã‚¡ã‚¤ãƒ«åˆ¶é™(KB) */
 define('TEMPLATE_SIZE', 10000);
-/** ƒJƒeƒSƒŠ‚ÌÅ‘åŠK‘w */
+/** ã‚«ãƒ†ã‚´ãƒªã®æœ€å¤§éšŽå±¤ */
 define('LEVEL_MAX', 5);
-/** Å‘åƒJƒeƒSƒŠ“o˜^” */
+/** æœ€å¤§ã‚«ãƒ†ã‚´ãƒªç™»éŒ²æ•° */
 define('CATEGORY_MAX', 1000);
-/** ŠÇ—ƒy[ƒWƒ^ƒCƒgƒ‹ */
-define('ADMIN_TITLE', "ECƒTƒCƒgŠÇ—ƒy[ƒW");
-/** •ÒWŽž‹­’²•\Ž¦F */
+/** ç®¡ç†ãƒšãƒ¼ã‚¸ã‚¿ã‚¤ãƒˆãƒ« */
+define('ADMIN_TITLE', "ECã‚µã‚¤ãƒˆç®¡ç†ãƒšãƒ¼ã‚¸");
+/** ç·¨é›†æ™‚å¼·èª¿è¡¨ç¤ºè‰² */
 define('SELECT_RGB', "#ffffdf");
-/** “ü—Í€–Ú–³ŒøŽž‚Ì•\Ž¦F */
+/** å…¥åŠ›é …ç›®ç„¡åŠ¹æ™‚ã®è¡¨ç¤ºè‰² */
 define('DISABLED_RGB', "#C9C9C9");
-/** ƒGƒ‰[Žž•\Ž¦F */
+/** ã‚¨ãƒ©ãƒ¼æ™‚è¡¨ç¤ºè‰² */
 define('ERR_COLOR', "#ffe8e8");
-/** eƒJƒeƒSƒŠ•\Ž¦•¶Žš */
+/** è¦ªã‚«ãƒ†ã‚´ãƒªè¡¨ç¤ºæ–‡å­— */
 define('CATEGORY_HEAD', ">");
-/** ¶”NŒŽ“ú‘I‘ðŠJŽn”N */
+/** ç”Ÿå¹´æœˆæ—¥é¸æŠžé–‹å§‹å¹´ */
 define('START_BIRTH_YEAR', 1901);
-/** ‰¿Ši–¼Ì */
-define('NORMAL_PRICE_TITLE', "’Êí‰¿Ši");
-/** ‰¿Ši–¼Ì */
-define('SALE_PRICE_TITLE', "”Ì”„‰¿Ši");
-/** ƒƒOƒtƒ@ƒCƒ‹ */
+/** ä¾¡æ ¼åç§° */
+define('NORMAL_PRICE_TITLE', "é€šå¸¸ä¾¡æ ¼");
+/** ä¾¡æ ¼åç§° */
+define('SALE_PRICE_TITLE', "è²©å£²ä¾¡æ ¼");
+/** ãƒ­ã‚°ãƒ•ã‚¡ã‚¤ãƒ« */
 define('LOG_PATH', DATA_PATH . "logs/site.log");
-/** ‰ïˆõƒƒOƒCƒ“ ƒƒOƒtƒ@ƒCƒ‹ */
+/** ä¼šå“¡ãƒ­ã‚°ã‚¤ãƒ³ ãƒ­ã‚°ãƒ•ã‚¡ã‚¤ãƒ« */
 define('CUSTOMER_LOG_PATH', DATA_PATH . "logs/customer.log");
-/** ‰æ‘œˆêŽž•Û‘¶ */
+/** ç”»åƒä¸€æ™‚ä¿å­˜ */
 define('IMAGE_TEMP_DIR', HTML_PATH . "upload/temp_image/");
-/** ‰æ‘œ•Û‘¶æ */
+/** ç”»åƒä¿å­˜å…ˆ */
 define('IMAGE_SAVE_DIR', HTML_PATH . "upload/save_image/");
-/** ‰æ‘œˆêŽž•Û‘¶URL */
+/** ç”»åƒä¸€æ™‚ä¿å­˜URL */
 define('IMAGE_TEMP_URL', URL_DIR . "upload/temp_image/");
-/** ‰æ‘œ•Û‘¶æURL */
+/** ç”»åƒä¿å­˜å…ˆURL */
 define('IMAGE_SAVE_URL', URL_DIR . "upload/save_image/");
-/** RSS—p‰æ‘œˆêŽž•Û‘¶URL */
+/** RSSç”¨ç”»åƒä¸€æ™‚ä¿å­˜URL */
 define('IMAGE_TEMP_URL_RSS', SITE_URL . "upload/temp_image/");
-/** RSS—p‰æ‘œ•Û‘¶æURL */
+/** RSSç”¨ç”»åƒä¿å­˜å…ˆURL */
 define('IMAGE_SAVE_URL_RSS', SITE_URL . "upload/save_image/");
-/** ƒGƒ“ƒR[ƒhCSV‚ÌˆêŽž•Û‘¶æ */
+/** ã‚¨ãƒ³ã‚³ãƒ¼ãƒ‰CSVã®ä¸€æ™‚ä¿å­˜å…ˆ */
 define('CSV_TEMP_DIR', DATA_PATH . "upload/csv/");
-/** ‰æ‘œ‚ª‚È‚¢ê‡‚É•\Ž¦ */
+/** ç”»åƒãŒãªã„å ´åˆã«è¡¨ç¤º */
 define('NO_IMAGE_URL', URL_DIR . "misc/blank.gif");
-/** ‰æ‘œ‚ª‚È‚¢ê‡‚É•\Ž¦ */
+/** ç”»åƒãŒãªã„å ´åˆã«è¡¨ç¤º */
 define('NO_IMAGE_DIR', HTML_PATH . "misc/blank.gif");
-/** ƒVƒXƒeƒ€ŠÇ—ƒgƒbƒv */
+/** ã‚·ã‚¹ãƒ†ãƒ ç®¡ç†ãƒˆãƒƒãƒ— */
 define('URL_SYSTEM_TOP', URL_DIR . "admin/system/index.php");
-/** ‹KŠi“o˜^ */
+/** è¦æ ¼ç™»éŒ² */
 define('URL_CLASS_REGIST', URL_DIR . "admin/products/class.php");
-/** —X•Ö”Ô†“ü—Í */
+/** éƒµä¾¿ç•ªå·å…¥åŠ› */
 define('URL_INPUT_ZIP', URL_DIR . "input_zip.php");
-/** ”z‘—‹ÆŽÒ“o˜^ */
+/** é…é€æ¥­è€…ç™»éŒ² */
 define('URL_DELIVERY_TOP', URL_DIR . "admin/basis/delivery.php");
-/** Žx•¥‚¢•û–@“o˜^ */
+/** æ”¯æ‰•ã„æ–¹æ³•ç™»éŒ² */
 define('URL_PAYMENT_TOP', URL_DIR . "admin/basis/payment.php");
-/** ƒTƒCƒgŠÇ—î•ñ“o˜^ */
+/** ã‚µã‚¤ãƒˆç®¡ç†æƒ…å ±ç™»éŒ² */
 define('URL_CONTROL_TOP', URL_DIR . "admin/basis/control.php");
-/** ƒz[ƒ€ */
+/** ãƒ›ãƒ¼ãƒ  */
 define('URL_HOME', URL_DIR . "admin/home.php");
-/** ƒƒOƒCƒ“ƒy[ƒW */
+/** ãƒ­ã‚°ã‚¤ãƒ³ãƒšãƒ¼ã‚¸ */
 define('URL_LOGIN', URL_DIR . "admin/index.php");
-/** ¤•iŒŸõƒy[ƒW */
+/** å•†å“æ¤œç´¢ãƒšãƒ¼ã‚¸ */
 define('URL_SEARCH_TOP', URL_DIR . "admin/products/index.php");
-/** ’•¶•ÒWƒy[ƒW */
+/** æ³¨æ–‡ç·¨é›†ãƒšãƒ¼ã‚¸ */
 define('URL_ORDER_EDIT', URL_DIR . "admin/order/edit.php");
-/** ’•¶•ÒWƒy[ƒW */
+/** æ³¨æ–‡ç·¨é›†ãƒšãƒ¼ã‚¸ */
 define('URL_SEARCH_ORDER', URL_DIR . "admin/order/index.php");
-/** ’•¶•ÒWƒy[ƒW */
+/** æ³¨æ–‡ç·¨é›†ãƒšãƒ¼ã‚¸ */
 define('URL_ORDER_MAIL', URL_DIR . "admin/order/mail.php");
-/** ƒƒOƒAƒEƒgƒy[ƒW */
+/** ãƒ­ã‚°ã‚¢ã‚¦ãƒˆãƒšãƒ¼ã‚¸ */
 define('URL_LOGOUT', URL_DIR . "admin/logout.php");
-/** ƒVƒXƒeƒ€ŠÇ—CSVo—Íƒy[ƒW */
+/** ã‚·ã‚¹ãƒ†ãƒ ç®¡ç†CSVå‡ºåŠ›ãƒšãƒ¼ã‚¸ */
 define('URL_SYSTEM_CSV', URL_DIR . "admin/system/member_csv.php");
-/** ŠÇ—ƒy[ƒW—pCSS•ÛŠÇƒfƒBƒŒƒNƒgƒŠ */
+/** ç®¡ç†ãƒšãƒ¼ã‚¸ç”¨CSSä¿ç®¡ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª */
 define('URL_ADMIN_CSS', URL_DIR . "admin/css/");
-/** ƒLƒƒƒ“ƒy[ƒ““o˜^ƒy[ƒW */
+/** ã‚­ãƒ£ãƒ³ãƒšãƒ¼ãƒ³ç™»éŒ²ãƒšãƒ¼ã‚¸ */
 define('URL_CAMPAIGN_TOP', URL_DIR . "admin/contents/campaign.php");
-/** ƒLƒƒƒ“ƒy[ƒ“ƒfƒUƒCƒ“Ý’èƒy[ƒW */
+/** ã‚­ãƒ£ãƒ³ãƒšãƒ¼ãƒ³ãƒ‡ã‚¶ã‚¤ãƒ³è¨­å®šãƒšãƒ¼ã‚¸ */
 define('URL_CAMPAIGN_DESIGN', URL_DIR . "admin/contents/campaign_design.php");
-/** ƒAƒNƒZƒX¬Œ÷ */
+/** ã‚¢ã‚¯ã‚»ã‚¹æˆåŠŸ */
 define('SUCCESS', 0);
-/** ƒƒOƒCƒ“Ž¸”s */
+/** ãƒ­ã‚°ã‚¤ãƒ³å¤±æ•— */
 define('LOGIN_ERROR', 1);
-/** ƒAƒNƒZƒXŽ¸”siƒ^ƒCƒ€ƒAƒEƒg“™j */
+/** ã‚¢ã‚¯ã‚»ã‚¹å¤±æ•—ï¼ˆã‚¿ã‚¤ãƒ ã‚¢ã‚¦ãƒˆç­‰ï¼‰ */
 define('ACCESS_ERROR', 2);
-/** ƒAƒNƒZƒXŒ ŒÀˆá”½ */
+/** ã‚¢ã‚¯ã‚»ã‚¹æ¨©é™é•å */
 define('AUTH_ERROR', 3);
-/** •s³‚È‘JˆÚƒGƒ‰[ */
+/** ä¸æ­£ãªé·ç§»ã‚¨ãƒ©ãƒ¼ */
 define('INVALID_MOVE_ERRORR', 4);
-/** ¤•iˆê——•\Ž¦” */
+/** å•†å“ä¸€è¦§è¡¨ç¤ºæ•° */
 define('PRODUCTS_LIST_MAX', 15);
-/** ƒƒ“ƒo[ŠÇ—ƒy[ƒW•\Ž¦s” */
+/** ãƒ¡ãƒ³ãƒãƒ¼ç®¡ç†ãƒšãƒ¼ã‚¸è¡¨ç¤ºè¡Œæ•° */
 define('MEMBER_PMAX', 10);
-/** ŒŸõƒy[ƒW•\Ž¦s” */
+/** æ¤œç´¢ãƒšãƒ¼ã‚¸è¡¨ç¤ºè¡Œæ•° */
 define('SEARCH_PMAX', 10);
-/** ƒy[ƒW”Ô†‚ÌÅ‘å•\Ž¦ŒÂ” */
+/** ãƒšãƒ¼ã‚¸ç•ªå·ã®æœ€å¤§è¡¨ç¤ºå€‹æ•° */
 define('NAVI_PMAX', 4);
-/** ¤•iƒTƒuî•ñÅ‘å” */
+/** å•†å“ã‚µãƒ–æƒ…å ±æœ€å¤§æ•° */
 define('PRODUCTSUB_MAX', 5);
-/** ”z‘—ŽžŠÔ‚ÌÅ‘å•\Ž¦” */
+/** é…é€æ™‚é–“ã®æœ€å¤§è¡¨ç¤ºæ•° */
 define('DELIVTIME_MAX', 16);
-/** ”z‘——¿‹à‚ÌÅ‘å•\Ž¦” */
+/** é…é€æ–™é‡‘ã®æœ€å¤§è¡¨ç¤ºæ•° */
 define('DELIVFEE_MAX', 47);
-/** ’Z‚¢€–Ú‚Ì•¶Žš”i–¼‘O‚È‚Ç) */
+/** çŸ­ã„é …ç›®ã®æ–‡å­—æ•°ï¼ˆåå‰ãªã©) */
 define('STEXT_LEN', 50);
 define('SMTEXT_LEN', 100);
-/** ’·‚¢€–Ú‚Ì•¶Žš”iZŠ‚È‚Çj */
+/** é•·ã„é …ç›®ã®æ–‡å­—æ•°ï¼ˆä½æ‰€ãªã©ï¼‰ */
 define('MTEXT_LEN', 200);
-/** ’·’†•¶‚Ì•¶Žš”i–â‚¢‡‚í‚¹‚È‚Çj */
+/** é•·ä¸­æ–‡ã®æ–‡å­—æ•°ï¼ˆå•ã„åˆã‚ã›ãªã©ï¼‰ */
 define('MLTEXT_LEN', 1000);
-/** ’·•¶‚Ì•¶Žš” */
+/** é•·æ–‡ã®æ–‡å­—æ•° */
 define('LTEXT_LEN', 3000);
-/** ’´’·•¶‚Ì•¶Žš”iƒƒ‹ƒ}ƒK‚È‚Çj */
+/** è¶…é•·æ–‡ã®æ–‡å­—æ•°ï¼ˆãƒ¡ãƒ«ãƒžã‚¬ãªã©ï¼‰ */
 define('LLTEXT_LEN', 99999);
-/** URL‚Ì•¶Žš’· */
+/** URLã®æ–‡å­—é•· */
 define('URL_LEN', 300);
-/** ŠÇ—‰æ–Ê—pFIDEƒpƒXƒ[ƒh‚Ì•¶Žš”§ŒÀ */
+/** ç®¡ç†ç”»é¢ç”¨ï¼šIDãƒ»ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã®æ–‡å­—æ•°åˆ¶é™ */
 define('ID_MAX_LEN', 15);
-/** ŠÇ—‰æ–Ê—pFIDEƒpƒXƒ[ƒh‚Ì•¶Žš”§ŒÀ */
+/** ç®¡ç†ç”»é¢ç”¨ï¼šIDãƒ»ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã®æ–‡å­—æ•°åˆ¶é™ */
 define('ID_MIN_LEN', 4);
-/** ‹àŠzŒ…” */
+/** é‡‘é¡æ¡æ•° */
 define('PRICE_LEN', 8);
-/** —¦Œ…” */
+/** çŽ‡æ¡æ•° */
 define('PERCENTAGE_LEN', 3);
-/** ÝŒÉ”A”Ì”„§ŒÀ” */
+/** åœ¨åº«æ•°ã€è²©å£²åˆ¶é™æ•° */
 define('AMOUNT_LEN', 6);
-/** —X•Ö”Ô†1 */
+/** éƒµä¾¿ç•ªå·1 */
 define('ZIP01_LEN', 3);
-/** —X•Ö”Ô†2 */
+/** éƒµä¾¿ç•ªå·2 */
 define('ZIP02_LEN', 4);
-/** “d˜b”Ô†Še€–Ú§ŒÀ */
+/** é›»è©±ç•ªå·å„é …ç›®åˆ¶é™ */
 define('TEL_ITEM_LEN', 6);
-/** “d˜b”Ô†‘” */
+/** é›»è©±ç•ªå·ç·æ•° */
 define('TEL_LEN', 12);
-/** ƒtƒƒ“ƒg‰æ–Ê—pFƒpƒXƒ[ƒh‚ÌÅ¬•¶Žš” */
+/** ãƒ•ãƒ­ãƒ³ãƒˆç”»é¢ç”¨ï¼šãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã®æœ€å°æ–‡å­—æ•° */
 define('PASSWORD_LEN1', 4);
-/** ƒtƒƒ“ƒg‰æ–Ê—pFƒpƒXƒ[ƒh‚ÌÅ‘å•¶Žš” */
+/** ãƒ•ãƒ­ãƒ³ãƒˆç”»é¢ç”¨ï¼šãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã®æœ€å¤§æ–‡å­—æ•° */
 define('PASSWORD_LEN2', 10);
-/** ŒŸ¸”’l—pŒ…”(INT) */
+/** æ¤œæŸ»æ•°å€¤ç”¨æ¡æ•°(INT) */
 define('INT_LEN', 8);
-/** ƒNƒŒƒWƒbƒgƒJ[ƒh‚Ì•¶Žš” */
+/** ã‚¯ãƒ¬ã‚¸ãƒƒãƒˆã‚«ãƒ¼ãƒ‰ã®æ–‡å­—æ•° */
 define('CREDIT_NO_LEN', 4);
-/** ŒŸõƒJƒeƒSƒŠÅ‘å•\Ž¦•¶Žš”(byte) */
+/** æ¤œç´¢ã‚«ãƒ†ã‚´ãƒªæœ€å¤§è¡¨ç¤ºæ–‡å­—æ•°(byte) */
 define('SEARCH_CATEGORY_LEN', 18);
-/** ƒtƒ@ƒCƒ‹–¼•\Ž¦•¶Žš” */
+/** ãƒ•ã‚¡ã‚¤ãƒ«åè¡¨ç¤ºæ–‡å­—æ•° */
 define('FILE_NAME_LEN', 10);
-/** w“ü§ŒÀ‚È‚µ‚Ìê‡‚ÌÅ‘åw“üŒÂ” */
+/** è³¼å…¥åˆ¶é™ãªã—ã®å ´åˆã®æœ€å¤§è³¼å…¥å€‹æ•° */
 define('SALE_LIMIT_MAX', 10);
-/** HTMLƒ^ƒCƒgƒ‹ */
-define('SITE_TITLE', "‚d‚b-‚b‚t‚a‚d  ƒeƒXƒgƒTƒCƒg");
-/** ƒNƒbƒL[•ÛŽŠúŒÀ(“ú) */
+/** HTMLã‚¿ã‚¤ãƒˆãƒ« */
+define('SITE_TITLE', "ï¼¥ï¼£-ï¼£ï¼µï¼¢ï¼¥  ãƒ†ã‚¹ãƒˆã‚µã‚¤ãƒˆ");
+/** ã‚¯ãƒƒã‚­ãƒ¼ä¿æŒæœŸé™(æ—¥) */
 define('COOKIE_EXPIRE', 365);
-/** Žw’è¤•iƒy[ƒW‚ª‚È‚¢ */
+/** æŒ‡å®šå•†å“ãƒšãƒ¼ã‚¸ãŒãªã„ */
 define('PRODUCT_NOT_FOUND', 1);
-/** ƒJ[ƒg“à‚ª‹ó */
+/** ã‚«ãƒ¼ãƒˆå†…ãŒç©º */
 define('CART_EMPTY', 2);
-/** ƒy[ƒW„ˆÚƒGƒ‰[ */
+/** ãƒšãƒ¼ã‚¸æŽ¨ç§»ã‚¨ãƒ©ãƒ¼ */
 define('PAGE_ERROR', 3);
-/** w“üˆ—’†‚ÌƒJ[ƒg¤•i’Ç‰ÁƒGƒ‰[ */
+/** è³¼å…¥å‡¦ç†ä¸­ã®ã‚«ãƒ¼ãƒˆå•†å“è¿½åŠ ã‚¨ãƒ©ãƒ¼ */
 define('CART_ADD_ERROR', 4);
-/** ‘¼‚É‚àw“üŽè‘±‚«‚ªs‚í‚ê‚½ê‡ */
+/** ä»–ã«ã‚‚è³¼å…¥æ‰‹ç¶šããŒè¡Œã‚ã‚ŒãŸå ´åˆ */
 define('CANCEL_PURCHASE', 5);
-/** Žw’èƒJƒeƒSƒŠƒy[ƒW‚ª‚È‚¢ */
+/** æŒ‡å®šã‚«ãƒ†ã‚´ãƒªãƒšãƒ¼ã‚¸ãŒãªã„ */
 define('CATEGORY_NOT_FOUND', 6);
-/** ƒƒOƒCƒ“‚ÉŽ¸”s */
+/** ãƒ­ã‚°ã‚¤ãƒ³ã«å¤±æ•— */
 define('SITE_LOGIN_ERROR', 7);
-/** ‰ïˆõê—pƒy[ƒW‚Ö‚ÌƒAƒNƒZƒXƒGƒ‰[ */
+/** ä¼šå“¡å°‚ç”¨ãƒšãƒ¼ã‚¸ã¸ã®ã‚¢ã‚¯ã‚»ã‚¹ã‚¨ãƒ©ãƒ¼ */
 define('CUSTOMER_ERROR', 8);
-/** w“üŽž‚Ì”„‚èØ‚êƒGƒ‰[ */
+/** è³¼å…¥æ™‚ã®å£²ã‚Šåˆ‡ã‚Œã‚¨ãƒ©ãƒ¼ */
 define('SOLD_OUT', 9);
-/** ƒJ[ƒg“à¤•i‚Ì“ÇžƒGƒ‰[ */
+/** ã‚«ãƒ¼ãƒˆå†…å•†å“ã®èª­è¾¼ã‚¨ãƒ©ãƒ¼ */
 define('CART_NOT_FOUND', 10);
-/** ƒ|ƒCƒ“ƒg‚Ì•s‘« */
+/** ãƒã‚¤ãƒ³ãƒˆã®ä¸è¶³ */
 define('LACK_POINT', 11);
-/** ‰¼“o˜^ŽÒ‚ªƒƒOƒCƒ“‚ÉŽ¸”s */
+/** ä»®ç™»éŒ²è€…ãŒãƒ­ã‚°ã‚¤ãƒ³ã«å¤±æ•— */
 define('TEMP_LOGIN_ERROR', 12);
-/** URLƒGƒ‰[ */
+/** URLã‚¨ãƒ©ãƒ¼ */
 define('URL_ERROR', 13);
-/** ƒtƒ@ƒCƒ‹‰ð“€ƒGƒ‰[ */
+/** ãƒ•ã‚¡ã‚¤ãƒ«è§£å‡ã‚¨ãƒ©ãƒ¼ */
 define('EXTRACT_ERROR', 14);
-/** FTPƒ_ƒEƒ“ƒ[ƒhƒGƒ‰[ */
+/** FTPãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã‚¨ãƒ©ãƒ¼ */
 define('FTP_DOWNLOAD_ERROR', 15);
-/** FTPƒƒOƒCƒ“ƒGƒ‰[ */
+/** FTPãƒ­ã‚°ã‚¤ãƒ³ã‚¨ãƒ©ãƒ¼ */
 define('FTP_LOGIN_ERROR', 16);
-/** FTPÚ‘±ƒGƒ‰[ */
+/** FTPæŽ¥ç¶šã‚¨ãƒ©ãƒ¼ */
 define('FTP_CONNECT_ERROR', 17);
-/** DBì¬ƒGƒ‰[ */
+/** DBä½œæˆã‚¨ãƒ©ãƒ¼ */
 define('CREATE_DB_ERROR', 18);
-/** DBƒCƒ“ƒ|[ƒgƒGƒ‰[ */
+/** DBã‚¤ãƒ³ãƒãƒ¼ãƒˆã‚¨ãƒ©ãƒ¼ */
 define('DB_IMPORT_ERROR', 19);
-/** Ý’èƒtƒ@ƒCƒ‹‘¶ÝƒGƒ‰[ */
+/** è¨­å®šãƒ•ã‚¡ã‚¤ãƒ«å­˜åœ¨ã‚¨ãƒ©ãƒ¼ */
 define('FILE_NOT_FOUND', 20);
-/** ‘‚«ž‚ÝƒGƒ‰[ */
+/** æ›¸ãè¾¼ã¿ã‚¨ãƒ©ãƒ¼ */
 define('WRITE_FILE_ERROR', 21);
-/** ƒtƒŠ[ƒƒbƒZ[ƒW */
+/** ãƒ•ãƒªãƒ¼ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ */
 define('FREE_ERROR_MSG', 999);
-/** ƒJƒeƒSƒŠ‹æØ‚è•¶Žš */
+/** ã‚«ãƒ†ã‚´ãƒªåŒºåˆ‡ã‚Šæ–‡å­— */
 define('SEPA_CATNAVI', " > ");
-/** ƒJƒeƒSƒŠ‹æØ‚è•¶Žš */
+/** ã‚«ãƒ†ã‚´ãƒªåŒºåˆ‡ã‚Šæ–‡å­— */
 define('SEPA_CATLIST', " | ");
-/** ‰ïˆõî•ñ“ü—Í */
+/** ä¼šå“¡æƒ…å ±å…¥åŠ› */
 define('URL_SHOP_TOP', SSL_URL . "shopping/index.php");
-/** ‰ïˆõ“o˜^ƒy[ƒWTOP */
+/** ä¼šå“¡ç™»éŒ²ãƒšãƒ¼ã‚¸TOP */
 define('URL_ENTRY_TOP', SSL_URL . "entry/index.php");
-/** ƒTƒCƒgƒgƒbƒv */
+/** ã‚µã‚¤ãƒˆãƒˆãƒƒãƒ— */
 define('URL_SITE_TOP', URL_DIR . "index.php");
-/** ƒJ[ƒgƒgƒbƒv */
+/** ã‚«ãƒ¼ãƒˆãƒˆãƒƒãƒ— */
 define('URL_CART_TOP', URL_DIR . "cart/index.php");
-/** ”z‘—ŽžŠÔÝ’è */
+/** é…é€æ™‚é–“è¨­å®š */
 define('URL_DELIV_TOP', URL_DIR . "shopping/deliv.php");
-/** Myƒy[ƒWƒgƒbƒv */
+/** Myãƒšãƒ¼ã‚¸ãƒˆãƒƒãƒ— */
 define('URL_MYPAGE_TOP', SSL_URL . "mypage/login.php");
-/** w“üŠm”Fƒy[ƒW */
+/** è³¼å…¥ç¢ºèªãƒšãƒ¼ã‚¸ */
 define('URL_SHOP_CONFIRM', URL_DIR . "shopping/confirm.php");
-/** ‚¨Žx•¥‚¢•û–@‘I‘ðƒy[ƒW */
+/** ãŠæ”¯æ‰•ã„æ–¹æ³•é¸æŠžãƒšãƒ¼ã‚¸ */
 define('URL_SHOP_PAYMENT', URL_DIR . "shopping/payment.php");
-/** w“üŠ®—¹‰æ–Ê */
+/** è³¼å…¥å®Œäº†ç”»é¢ */
 define('URL_SHOP_COMPLETE', URL_DIR . "shopping/complete.php");
-/** ƒJ[ƒhŒˆÏ‰æ–Ê */
+/** ã‚«ãƒ¼ãƒ‰æ±ºæ¸ˆç”»é¢ */
 define('URL_SHOP_CREDIT', URL_DIR . "shopping/card.php");
-/** ƒ[ƒ“ŒˆÏ‰æ–Ê */
+/** ãƒ­ãƒ¼ãƒ³æ±ºæ¸ˆç”»é¢ */
 define('URL_SHOP_LOAN', URL_DIR . "shopping/loan.php");
-/** ƒRƒ“ƒrƒjŒˆÏ‰æ–Ê */
+/** ã‚³ãƒ³ãƒ“ãƒ‹æ±ºæ¸ˆç”»é¢ */
 define('URL_SHOP_CONVENIENCE', URL_DIR . "shopping/convenience.php");
-/** ƒ‚ƒWƒ…[ƒ‹’Ç‰Á—p‰æ–Ê */
+/** ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«è¿½åŠ ç”¨ç”»é¢ */
 define('URL_SHOP_MODULE', URL_DIR . "shopping/load_payment_module.php");
-/** ¤•iƒgƒbƒv */
+/** å•†å“ãƒˆãƒƒãƒ— */
 define('URL_PRODUCTS_TOP', URL_DIR . "products/top.php");
-/** ¤•iˆê——(HTMLo—Í) */
+/** å•†å“ä¸€è¦§(HTMLå‡ºåŠ›) */
 define('LIST_P_HTML', URL_DIR . "products/list-p");
-/** ¤•iˆê——(HTMLo—Í) */
+/** å•†å“ä¸€è¦§(HTMLå‡ºåŠ›) */
 define('LIST_C_HTML', URL_DIR . "products/list.php?mode=search&category_id=");
-/** ¤•iÚ×(HTMLo—Í) */
+/** å•†å“è©³ç´°(HTMLå‡ºåŠ›) */
 define('DETAIL_P_HTML', URL_DIR . "products/detail.php?product_id=");
-/** ƒ}ƒCƒy[ƒW‚¨“Í‚¯æURL */
+/** ãƒžã‚¤ãƒšãƒ¼ã‚¸ãŠå±Šã‘å…ˆURL */
 define('MYPAGE_DELIVADDR_URL', URL_DIR . "mypage/delivery.php");
-/** ƒ[ƒ‹ƒAƒhƒŒƒXŽí•Ê */
+/** ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹ç¨®åˆ¥ */
 define('MAIL_TYPE_PC', 1);
-/** ƒ[ƒ‹ƒAƒhƒŒƒXŽí•Ê */
+/** ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹ç¨®åˆ¥ */
 define('MAIL_TYPE_MOBILE', 2);
-/** V‹K’•¶ */
+/** æ–°è¦æ³¨æ–‡ */
 define('ORDER_NEW', 1);
-/** “ü‹à‘Ò‚¿ */
+/** å…¥é‡‘å¾…ã¡ */
 define('ORDER_PAY_WAIT', 2);
-/** “ü‹àÏ‚Ý */
+/** å…¥é‡‘æ¸ˆã¿ */
 define('ORDER_PRE_END', 6);
-/** ƒLƒƒƒ“ƒZƒ‹ */
+/** ã‚­ãƒ£ãƒ³ã‚»ãƒ« */
 define('ORDER_CANCEL', 3);
-/** Žæ‚èŠñ‚¹’† */
+/** å–ã‚Šå¯„ã›ä¸­ */
 define('ORDER_BACK_ORDER', 4);
-/** ”­‘—Ï‚Ý */
+/** ç™ºé€æ¸ˆã¿ */
 define('ORDER_DELIV', 5);
-/** Žó’Š®—¹Žž‚ÌƒXƒe[ƒ^ƒX”Ô† */
+/** å—æ³¨å®Œäº†æ™‚ã®ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ç•ªå· */
 define('ODERSTATUS_COMMIT', ORDER_DELIV);
-/** V’…î•ñŠÇ—‰æ–Ê ŠJŽn”N(¼—ï)  */
+/** æ–°ç€æƒ…å ±ç®¡ç†ç”»é¢ é–‹å§‹å¹´(è¥¿æš¦)  */
 define('ADMIN_NEWS_STARTYEAR', 2005);
-/** ‰ïˆõ“o˜^ */
-define('ENTRY_CUSTOMER_TEMP_SUBJECT', "‰ïˆõ‰¼“o˜^‚ªŠ®—¹‚¢‚½‚µ‚Ü‚µ‚½B");
-/** ‰ïˆõ“o˜^ */
-define('ENTRY_CUSTOMER_REGIST_SUBJECT', "–{‰ïˆõ“o˜^‚ªŠ®—¹‚¢‚½‚µ‚Ü‚µ‚½B");
-/** Ä“ü‰ï§ŒÀŽžŠÔi’PˆÊ: ŽžŠÔ) */
+/** ä¼šå“¡ç™»éŒ² */
+define('ENTRY_CUSTOMER_TEMP_SUBJECT', "ä¼šå“¡ä»®ç™»éŒ²ãŒå®Œäº†ã„ãŸã—ã¾ã—ãŸã€‚");
+/** ä¼šå“¡ç™»éŒ² */
+define('ENTRY_CUSTOMER_REGIST_SUBJECT', "æœ¬ä¼šå“¡ç™»éŒ²ãŒå®Œäº†ã„ãŸã—ã¾ã—ãŸã€‚");
+/** å†å…¥ä¼šåˆ¶é™æ™‚é–“ï¼ˆå˜ä½: æ™‚é–“) */
 define('ENTRY_LIMIT_HOUR', 1);
-/** ƒIƒXƒXƒ¤•i•\Ž¦” */
+/** ã‚ªã‚¹ã‚¹ãƒ¡å•†å“è¡¨ç¤ºæ•° */
 define('RECOMMEND_NUM', 8);
-/** ƒxƒXƒg¤•i‚ÌÅ‘å“o˜^” */
+/** ãƒ™ã‚¹ãƒˆå•†å“ã®æœ€å¤§ç™»éŒ²æ•° */
 define('BEST_MAX', 5);
-/** ƒxƒXƒg¤•i‚ÌÅ¬“o˜^”i“o˜^”‚ª–ž‚½‚È‚¢ê‡‚Í•\Ž¦‚µ‚È‚¢B) */
+/** ãƒ™ã‚¹ãƒˆå•†å“ã®æœ€å°ç™»éŒ²æ•°ï¼ˆç™»éŒ²æ•°ãŒæº€ãŸãªã„å ´åˆã¯è¡¨ç¤ºã—ãªã„ã€‚) */
 define('BEST_MIN', 3);
-/** ”z’B‰Â”\‚È“ú•tˆÈ~‚Ìƒvƒ‹ƒ_ƒEƒ“•\Ž¦Å‘å“ú” */
+/** é…é”å¯èƒ½ãªæ—¥ä»˜ä»¥é™ã®ãƒ—ãƒ«ãƒ€ã‚¦ãƒ³è¡¨ç¤ºæœ€å¤§æ—¥æ•° */
 define('DELIV_DATE_END_MAX', 21);
-/** w“üŽž‹­§‰ïˆõ“o˜^(1:—LŒø@0:–³Œø) */
+/** è³¼å…¥æ™‚å¼·åˆ¶ä¼šå“¡ç™»éŒ²(1:æœ‰åŠ¹ã€€0:ç„¡åŠ¹) */
 define('PURCHASE_CUSTOMER_REGIST', 0);
-/** ‚±‚Ì¤•i‚ð”ƒ‚Á‚½l‚Í‚±‚ñ‚È¤•i‚à”ƒ‚Á‚Ä‚¢‚Ü‚·@•\Ž¦Œ” */
+/** ã“ã®å•†å“ã‚’è²·ã£ãŸäººã¯ã“ã‚“ãªå•†å“ã‚‚è²·ã£ã¦ã„ã¾ã™ã€€è¡¨ç¤ºä»¶æ•° */
 define('RELATED_PRODUCTS_MAX', 3);
-/** Žx•¥ŠúŒÀ */
+/** æ”¯æ‰•æœŸé™ */
 define('CV_PAYMENT_LIMIT', 14);
-/** ƒLƒƒƒ“ƒy[ƒ““o˜^Å‘å” */
+/** ã‚­ãƒ£ãƒ³ãƒšãƒ¼ãƒ³ç™»éŒ²æœ€å¤§æ•° */
 define('CAMPAIGN_REGIST_MAX', 20);
-/** ¤•iƒŒƒrƒ…[‚ÅURL‘‚«ž‚Ý‚ð‹–‰Â‚·‚é‚©”Û‚© */
+/** å•†å“ãƒ¬ãƒ“ãƒ¥ãƒ¼ã§URLæ›¸ãè¾¼ã¿ã‚’è¨±å¯ã™ã‚‹ã‹å¦ã‹ */
 define('REVIEW_ALLOW_URL', 0);
-/** ƒgƒ‰ƒbƒNƒoƒbƒN •\Ž¦ */
+/** ãƒˆãƒ©ãƒƒã‚¯ãƒãƒƒã‚¯ è¡¨ç¤º */
 define('TRACKBACK_STATUS_VIEW', 1);
-/** ƒgƒ‰ƒbƒNƒoƒbƒN ”ñ•\Ž¦ */
+/** ãƒˆãƒ©ãƒƒã‚¯ãƒãƒƒã‚¯ éžè¡¨ç¤º */
 define('TRACKBACK_STATUS_NOT_VIEW', 2);
-/** ƒgƒ‰ƒbƒNƒoƒbƒN ƒXƒpƒ€ */
+/** ãƒˆãƒ©ãƒƒã‚¯ãƒãƒƒã‚¯ ã‚¹ãƒ‘ãƒ  */
 define('TRACKBACK_STATUS_SPAM', 3);
-/** ƒtƒƒ“ƒgÅ‘å•\Ž¦” */
+/** ãƒ•ãƒ­ãƒ³ãƒˆæœ€å¤§è¡¨ç¤ºæ•° */
 define('TRACKBACK_VIEW_MAX', 10);
-/** ƒgƒ‰ƒbƒNƒoƒbƒNæURL */
+/** ãƒˆãƒ©ãƒƒã‚¯ãƒãƒƒã‚¯å…ˆURL */
 define('TRACKBACK_TO_URL', SITE_URL . "tb/index.php?pid=");
-/** ƒTƒCƒgŠÇ— ƒgƒ‰ƒbƒNƒoƒbƒN */
+/** ã‚µã‚¤ãƒˆç®¡ç† ãƒˆãƒ©ãƒƒã‚¯ãƒãƒƒã‚¯ */
 define('SITE_CONTROL_TRACKBACK', 1);
-/** ƒTƒCƒgŠÇ— ƒAƒtƒBƒŠƒGƒCƒg */
+/** ã‚µã‚¤ãƒˆç®¡ç† ã‚¢ãƒ•ã‚£ãƒªã‚¨ã‚¤ãƒˆ */
 define('SITE_CONTROL_AFFILIATE', 2);
-/** Pear::Mail ƒoƒbƒNƒGƒ“ƒh:mail|smtp|sendmail */
+/** Pear::Mail ãƒãƒƒã‚¯ã‚¨ãƒ³ãƒ‰:mail|smtp|sendmail */
 define('MAIL_BACKEND', "smtp");
-/** OSŽí•Ê:WIN|LINUX */
+/** OSç¨®åˆ¥:WIN|LINUX */
 define('OS_TYPE', "LINUX");
-/** SMTPƒT[ƒo[ */
+/** SMTPã‚µãƒ¼ãƒãƒ¼ */
 define('SMTP_HOST', "127.0.0.1");
-/** SMTPƒ|[ƒg */
+/** SMTPãƒãƒ¼ãƒˆ */
 define('SMTP_PORT', "25");
-/** ƒ|ƒCƒ“ƒg‚ð—˜—p‚·‚é‚©(true:—˜—p‚·‚éAfalse:—˜—p‚µ‚È‚¢) (false ‚Íˆê•”‘Î‰ž) */
+/** ãƒã‚¤ãƒ³ãƒˆã‚’åˆ©ç”¨ã™ã‚‹ã‹(true:åˆ©ç”¨ã™ã‚‹ã€false:åˆ©ç”¨ã—ãªã„) (false ã¯ä¸€éƒ¨å¯¾å¿œ) */
 define('USE_POINT', true);
-/** ƒfƒtƒHƒ‹ƒgƒeƒ“ƒvƒŒ[ƒg–¼ */
+/** ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆå */
 define('DEFAULT_TEMPLATE_NAME', "default");
-/** ƒeƒ“ƒvƒŒ[ƒg–¼ */
+/** ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆå */
 define('TEMPLATE_NAME', "default");
-/** SMARTYƒeƒ“ƒvƒŒ[ƒg */
+/** SMARTYãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆ */
 define('SMARTY_TEMPLATES_DIR',  DATA_PATH . "Smarty/templates/");
-/** SMARTYƒeƒ“ƒvƒŒ[ƒg */
+/** SMARTYãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆ */
 define('TPL_DIR', URL_DIR . USER_DIR . USER_PACKAGE_DIR . TEMPLATE_NAME . "/");
-/** SMARTYƒeƒ“ƒvƒŒ[ƒg */
+/** SMARTYãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆ */
 define('TEMPLATE_DIR', SMARTY_TEMPLATES_DIR . TEMPLATE_NAME . "/");
-/** SMARTYƒeƒ“ƒvƒŒ[ƒg(ŠÇ—ƒy[ƒW) */
+/** SMARTYãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆ(ç®¡ç†ãƒšãƒ¼ã‚¸) */
 define('TEMPLATE_ADMIN_DIR',  SMARTY_TEMPLATES_DIR . DEFAULT_TEMPLATE_NAME . "/admin/");
-/** SMARTYƒRƒ“ƒpƒCƒ‹ */
+/** SMARTYã‚³ãƒ³ãƒ‘ã‚¤ãƒ« */
 define('COMPILE_DIR', DATA_PATH . "Smarty/templates_c/" . TEMPLATE_NAME . "/");
-/** SMARTYƒRƒ“ƒpƒCƒ‹(ŠÇ—ƒy[ƒW) */
+/** SMARTYã‚³ãƒ³ãƒ‘ã‚¤ãƒ«(ç®¡ç†ãƒšãƒ¼ã‚¸) */
 define('COMPILE_ADMIN_DIR', COMPILE_DIR . "admin/");
-/** SMARTYƒeƒ“ƒvƒŒ[ƒg(FTP‹–‰Â) */
+/** SMARTYãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆ(FTPè¨±å¯) */
 define('TEMPLATE_FTP_DIR', USER_PATH . USER_PACKAGE_DIR . TEMPLATE_NAME . "/");
-/** SMARTYƒRƒ“ƒpƒCƒ‹(FTP‹–‰Â) */
+/** SMARTYã‚³ãƒ³ãƒ‘ã‚¤ãƒ«(FTPè¨±å¯) */
 define('COMPILE_FTP_DIR', COMPILE_DIR . USER_DIR);
-/** ƒuƒƒbƒNƒtƒ@ƒCƒ‹•Û‘¶æ */
+/** ãƒ–ãƒ­ãƒƒã‚¯ãƒ•ã‚¡ã‚¤ãƒ«ä¿å­˜å…ˆ */
 define('BLOC_DIR', "bloc/");
-/** ƒuƒƒbƒNƒtƒ@ƒCƒ‹•Û‘¶æ */
+/** ãƒ–ãƒ­ãƒƒã‚¯ãƒ•ã‚¡ã‚¤ãƒ«ä¿å­˜å…ˆ */
 define('BLOC_PATH', TEMPLATE_DIR . BLOC_DIR);
-/** ƒLƒƒƒ“ƒy[ƒ“ƒtƒ@ƒCƒ‹•Û‘¶æ */
+/** ã‚­ãƒ£ãƒ³ãƒšãƒ¼ãƒ³ãƒ•ã‚¡ã‚¤ãƒ«ä¿å­˜å…ˆ */
 define('CAMPAIGN_DIR', "cp/");
-/** ƒLƒƒƒ“ƒy[ƒ“ŠÖ˜A */
+/** ã‚­ãƒ£ãƒ³ãƒšãƒ¼ãƒ³é–¢é€£ */
 define('CAMPAIGN_URL', URL_DIR . CAMPAIGN_DIR);
-/** ƒLƒƒƒ“ƒy[ƒ“ŠÖ˜A */
+/** ã‚­ãƒ£ãƒ³ãƒšãƒ¼ãƒ³é–¢é€£ */
 define('CAMPAIGN_PATH', HTML_PATH . CAMPAIGN_DIR);
-/** ƒLƒƒƒ“ƒy[ƒ“ŠÖ˜A */
+/** ã‚­ãƒ£ãƒ³ãƒšãƒ¼ãƒ³é–¢é€£ */
 define('CAMPAIGN_TEMPLATE_DIR', "campaign/");
-/** ƒLƒƒƒ“ƒy[ƒ“ŠÖ˜A */
+/** ã‚­ãƒ£ãƒ³ãƒšãƒ¼ãƒ³é–¢é€£ */
 define('CAMPAIGN_TEMPLATE_PATH', TEMPLATE_DIR . CAMPAIGN_TEMPLATE_DIR);
-/** ƒLƒƒƒ“ƒy[ƒ“ŠÖ˜A */
+/** ã‚­ãƒ£ãƒ³ãƒšãƒ¼ãƒ³é–¢é€£ */
 define('CAMPAIGN_BLOC_DIR', "bloc/");
-/** ƒLƒƒƒ“ƒy[ƒ“ŠÖ˜A */
+/** ã‚­ãƒ£ãƒ³ãƒšãƒ¼ãƒ³é–¢é€£ */
 define('CAMPAIGN_BLOC_PATH', CAMPAIGN_TEMPLATE_PATH . CAMPAIGN_BLOC_DIR);
-/** ƒLƒƒƒ“ƒy[ƒ“ŠÖ˜A */
+/** ã‚­ãƒ£ãƒ³ãƒšãƒ¼ãƒ³é–¢é€£ */
 define('CAMPAIGN_TEMPLATE_ACTIVE', "active/");
-/** ƒLƒƒƒ“ƒy[ƒ“ŠÖ˜A */
+/** ã‚­ãƒ£ãƒ³ãƒšãƒ¼ãƒ³é–¢é€£ */
 define('CAMPAIGN_TEMPLATE_END', "end/");
-/** SMARTYƒeƒ“ƒvƒŒ[ƒg(mobile) */
+/** SMARTYãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆ(mobile) */
 define('MOBILE_TEMPLATE_DIR', TEMPLATE_DIR . "mobile/");
-/** SMARTYƒRƒ“ƒpƒCƒ‹(mobile) */
+/** SMARTYã‚³ãƒ³ãƒ‘ã‚¤ãƒ«(mobile) */
 define('MOBILE_COMPILE_DIR', COMPILE_DIR . "mobile/");
-/** ƒZƒbƒVƒ‡ƒ“‚Ì‘¶‘±ŽžŠÔ (•b) */
+/** ã‚»ãƒƒã‚·ãƒ§ãƒ³ã®å­˜ç¶šæ™‚é–“ (ç§’) */
 define('MOBILE_SESSION_LIFETIME', 1800);
-/** ‹óƒ[ƒ‹‹@”\‚ðŽg—p‚·‚é‚©‚Ç‚¤‚© */
+/** ç©ºãƒ¡ãƒ¼ãƒ«æ©Ÿèƒ½ã‚’ä½¿ç”¨ã™ã‚‹ã‹ã©ã†ã‹ */
 define('MOBILE_USE_KARA_MAIL', false);
-/** ‹óƒ[ƒ‹Žó‚¯•t‚¯ƒAƒhƒŒƒX‚Ìƒ†[ƒU[–¼•”•ª */
+/** ç©ºãƒ¡ãƒ¼ãƒ«å—ã‘ä»˜ã‘ã‚¢ãƒ‰ãƒ¬ã‚¹ã®ãƒ¦ãƒ¼ã‚¶ãƒ¼åéƒ¨åˆ† */
 define('MOBILE_KARA_MAIL_ADDRESS_USER', "eccube");
-/** ‹óƒ[ƒ‹Žó‚¯•t‚¯ƒAƒhƒŒƒX‚Ìƒ†[ƒU[–¼‚ÆƒRƒ}ƒ“ƒh‚ÌŠÔ‚Ì‹æØ‚è•¶Žš qmail ‚Ìê‡‚Í - */
+/** ç©ºãƒ¡ãƒ¼ãƒ«å—ã‘ä»˜ã‘ã‚¢ãƒ‰ãƒ¬ã‚¹ã®ãƒ¦ãƒ¼ã‚¶ãƒ¼åã¨ã‚³ãƒžãƒ³ãƒ‰ã®é–“ã®åŒºåˆ‡ã‚Šæ–‡å­— qmail ã®å ´åˆã¯ - */
 define('MOBILE_KARA_MAIL_ADDRESS_DELIMITER', "+");
-/** ‹óƒ[ƒ‹Žó‚¯•t‚¯ƒAƒhƒŒƒX‚ÌƒhƒƒCƒ“•”•ª */
+/** ç©ºãƒ¡ãƒ¼ãƒ«å—ã‘ä»˜ã‘ã‚¢ãƒ‰ãƒ¬ã‚¹ã®ãƒ‰ãƒ¡ã‚¤ãƒ³éƒ¨åˆ† */
 define('MOBILE_KARA_MAIL_ADDRESS_DOMAIN', "");
-/** Œg‘Ñ‚Ìƒ[ƒ‹ƒAƒhƒŒƒX‚Å‚Í‚È‚¢‚ªAŒg‘Ñ‚¾‚Æ‚Ý‚È‚·ƒhƒƒCƒ“‚ÌƒŠƒXƒg ”CˆÓ‚Ì”‚Ìu,vu v‚Å‹æØ‚éB */
+/** æºå¸¯ã®ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹ã§ã¯ãªã„ãŒã€æºå¸¯ã ã¨ã¿ãªã™ãƒ‰ãƒ¡ã‚¤ãƒ³ã®ãƒªã‚¹ãƒˆ ä»»æ„ã®æ•°ã®ã€Œ,ã€ã€Œ ã€ã§åŒºåˆ‡ã‚‹ã€‚ */
 define('MOBILE_ADDITIONAL_MAIL_DOMAINS', "");
-/** Œg‘Ñ“d˜bŒü‚¯•ÏŠ·‰æ‘œ•Û‘¶ƒfƒBƒŒƒNƒgƒŠ */
+/** æºå¸¯é›»è©±å‘ã‘å¤‰æ›ç”»åƒä¿å­˜ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª */
 define('MOBILE_IMAGE_DIR', HTML_PATH . "upload/mobile_image");
-/** Œg‘Ñ“d˜bŒü‚¯•ÏŠ·‰æ‘œ•Û‘¶ƒfƒBƒŒƒNƒgƒŠ */
+/** æºå¸¯é›»è©±å‘ã‘å¤‰æ›ç”»åƒä¿å­˜ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª */
 define('MOBILE_IMAGE_URL', URL_DIR . "upload/mobile_image");
-/** ƒ‚ƒoƒCƒ‹URL */
+/** ãƒ¢ãƒã‚¤ãƒ«URL */
 define('MOBILE_URL_SITE_TOP', MOBILE_URL_DIR . "index.php");
-/** ƒJ[ƒgƒgƒbƒv */
+/** ã‚«ãƒ¼ãƒˆãƒˆãƒƒãƒ— */
 define('MOBILE_URL_CART_TOP', MOBILE_URL_DIR . "cart/index.php");
-/** ‰ïˆõî•ñ“ü—Í */
+/** ä¼šå“¡æƒ…å ±å…¥åŠ› */
 define('MOBILE_URL_SHOP_TOP', MOBILE_SSL_URL . "shopping/index.php");
-/** w“üŠm”Fƒy[ƒW */
+/** è³¼å…¥ç¢ºèªãƒšãƒ¼ã‚¸ */
 define('MOBILE_URL_SHOP_CONFIRM', MOBILE_URL_DIR . "shopping/confirm.php");
-/** ‚¨Žx•¥‚¢•û–@‘I‘ðƒy[ƒW */
+/** ãŠæ”¯æ‰•ã„æ–¹æ³•é¸æŠžãƒšãƒ¼ã‚¸ */
 define('MOBILE_URL_SHOP_PAYMENT', MOBILE_URL_DIR . "shopping/payment.php");
-/** ¤•iÚ×(HTMLo—Í) */
+/** å•†å“è©³ç´°(HTMLå‡ºåŠ›) */
 define('MOBILE_DETAIL_P_HTML', MOBILE_URL_DIR . "products/detail.php?product_id=");
-/** w“üŠ®—¹‰æ–Ê */
+/** è³¼å…¥å®Œäº†ç”»é¢ */
 define('MOBILE_URL_SHOP_COMPLETE', MOBILE_URL_DIR . "shopping/complete.php");
-/** ƒ‚ƒWƒ…[ƒ‹’Ç‰Á—p‰æ–Ê */
+/** ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«è¿½åŠ ç”¨ç”»é¢ */
 define('MOBILE_URL_SHOP_MODULE', MOBILE_URL_DIR . "shopping/load_payment_module.php");
-/** ƒZƒbƒVƒ‡ƒ“ˆÛŽ‚Ì•û–@ */
+/** ã‚»ãƒƒã‚·ãƒ§ãƒ³ç¶­æŒã®æ–¹æ³• */
 define('SESSION_KEEP_METHOD', 'useCookie');
-/** ƒZƒbƒVƒ‡ƒ“‚Ì‘¶‘±ŽžŠÔ (•b) */
+/** ã‚»ãƒƒã‚·ãƒ§ãƒ³ã®å­˜ç¶šæ™‚é–“ (ç§’) */
 define('SESSION_LIFETIME', 1800);
-/** ƒI[ƒi[ƒYƒXƒgƒAURL */
+/** ã‚ªãƒ¼ãƒŠãƒ¼ã‚ºã‚¹ãƒˆã‚¢URL */
 define('OSTORE_URL', "http://store.ec-cube.net/");
-/** ƒI[ƒi[ƒYƒXƒgƒAURL */
+/** ã‚ªãƒ¼ãƒŠãƒ¼ã‚ºã‚¹ãƒˆã‚¢URL */
 define('OSTORE_SSLURL', "https://store.ec-cube.net/");
-/** ƒI[ƒi[ƒYƒXƒgƒAƒƒOƒpƒX */
+/** ã‚ªãƒ¼ãƒŠãƒ¼ã‚ºã‚¹ãƒˆã‚¢ãƒ­ã‚°ãƒ‘ã‚¹ */
 define('OSTORE_LOG_PATH', DATA_PATH . "logs/ownersstore.log");
-/** ƒI[ƒi[ƒYƒXƒgƒA’ÊMƒXƒe[ƒ^ƒX */
+/** ã‚ªãƒ¼ãƒŠãƒ¼ã‚ºã‚¹ãƒˆã‚¢é€šä¿¡ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ */
 define('OSTORE_STATUS_ERROR', 'ERROR');
-/** ƒI[ƒi[ƒYƒXƒgƒA’ÊMƒXƒe[ƒ^ƒX */
+/** ã‚ªãƒ¼ãƒŠãƒ¼ã‚ºã‚¹ãƒˆã‚¢é€šä¿¡ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ */
 define('OSTORE_STATUS_SUCCESS', 'SUCCESS');
-/** ƒI[ƒi[ƒYƒXƒgƒA’ÊMƒGƒ‰[ƒR[ƒh */
+/** ã‚ªãƒ¼ãƒŠãƒ¼ã‚ºã‚¹ãƒˆã‚¢é€šä¿¡ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰ */
 define('OSTORE_E_UNKNOWN', '1000');
-/** ƒI[ƒi[ƒYƒXƒgƒA’ÊMƒGƒ‰[ƒR[ƒh */
+/** ã‚ªãƒ¼ãƒŠãƒ¼ã‚ºã‚¹ãƒˆã‚¢é€šä¿¡ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰ */
 define('OSTORE_E_INVALID_PARAM', '1001');
-/** ƒI[ƒi[ƒYƒXƒgƒA’ÊMƒGƒ‰[ƒR[ƒh */
+/** ã‚ªãƒ¼ãƒŠãƒ¼ã‚ºã‚¹ãƒˆã‚¢é€šä¿¡ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰ */
 define('OSTORE_E_NO_CUSTOMER', '1002');
-/** ƒI[ƒi[ƒYƒXƒgƒA’ÊMƒGƒ‰[ƒR[ƒh */
+/** ã‚ªãƒ¼ãƒŠãƒ¼ã‚ºã‚¹ãƒˆã‚¢é€šä¿¡ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰ */
 define('OSTORE_E_WRONG_URL_PASS', '1003');
-/** ƒI[ƒi[ƒYƒXƒgƒA’ÊMƒGƒ‰[ƒR[ƒh */
+/** ã‚ªãƒ¼ãƒŠãƒ¼ã‚ºã‚¹ãƒˆã‚¢é€šä¿¡ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰ */
 define('OSTORE_E_NO_PRODUCTS', '1004');
-/** ƒI[ƒi[ƒYƒXƒgƒA’ÊMƒGƒ‰[ƒR[ƒh */
+/** ã‚ªãƒ¼ãƒŠãƒ¼ã‚ºã‚¹ãƒˆã‚¢é€šä¿¡ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰ */
 define('OSTORE_E_NO_DL_DATA', '1005');
-/** ƒI[ƒi[ƒYƒXƒgƒA’ÊMƒGƒ‰[ƒR[ƒh */
+/** ã‚ªãƒ¼ãƒŠãƒ¼ã‚ºã‚¹ãƒˆã‚¢é€šä¿¡ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰ */
 define('OSTORE_E_DL_DATA_OPEN', '1006');
-/** ƒI[ƒi[ƒYƒXƒgƒA’ÊMƒGƒ‰[ƒR[ƒh */
+/** ã‚ªãƒ¼ãƒŠãƒ¼ã‚ºã‚¹ãƒˆã‚¢é€šä¿¡ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰ */
 define('OSTORE_E_DLLOG_AUTH', '1007');
-/** ƒI[ƒi[ƒYƒXƒgƒA’ÊMƒGƒ‰[ƒR[ƒh */
+/** ã‚ªãƒ¼ãƒŠãƒ¼ã‚ºã‚¹ãƒˆã‚¢é€šä¿¡ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰ */
 define('OSTORE_E_C_ADMIN_AUTH', '2001');
-/** ƒI[ƒi[ƒYƒXƒgƒA’ÊMƒGƒ‰[ƒR[ƒh */
+/** ã‚ªãƒ¼ãƒŠãƒ¼ã‚ºã‚¹ãƒˆã‚¢é€šä¿¡ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰ */
 define('OSTORE_E_C_HTTP_REQ', '2002');
-/** ƒI[ƒi[ƒYƒXƒgƒA’ÊMƒGƒ‰[ƒR[ƒh */
+/** ã‚ªãƒ¼ãƒŠãƒ¼ã‚ºã‚¹ãƒˆã‚¢é€šä¿¡ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰ */
 define('OSTORE_E_C_HTTP_RESP', '2003');
-/** ƒI[ƒi[ƒYƒXƒgƒA’ÊMƒGƒ‰[ƒR[ƒh */
+/** ã‚ªãƒ¼ãƒŠãƒ¼ã‚ºã‚¹ãƒˆã‚¢é€šä¿¡ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰ */
 define('OSTORE_E_C_FAILED_JSON_PARSE', '2004');
-/** ƒI[ƒi[ƒYƒXƒgƒA’ÊMƒGƒ‰[ƒR[ƒh */
+/** ã‚ªãƒ¼ãƒŠãƒ¼ã‚ºã‚¹ãƒˆã‚¢é€šä¿¡ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰ */
 define('OSTORE_E_C_NO_KEY', '2005');
-/** ƒI[ƒi[ƒYƒXƒgƒA’ÊMƒGƒ‰[ƒR[ƒh */
+/** ã‚ªãƒ¼ãƒŠãƒ¼ã‚ºã‚¹ãƒˆã‚¢é€šä¿¡ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰ */
 define('OSTORE_E_C_INVALID_ACCESS', '2006');
-/** ƒI[ƒi[ƒYƒXƒgƒA’ÊMƒGƒ‰[ƒR[ƒh */
+/** ã‚ªãƒ¼ãƒŠãƒ¼ã‚ºã‚¹ãƒˆã‚¢é€šä¿¡ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰ */
 define('OSTORE_E_C_INVALID_PARAM', '2007');
-/** ƒI[ƒi[ƒYƒXƒgƒA’ÊMƒGƒ‰[ƒR[ƒh */
+/** ã‚ªãƒ¼ãƒŠãƒ¼ã‚ºã‚¹ãƒˆã‚¢é€šä¿¡ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰ */
 define('OSTORE_E_C_AUTOUP_DISABLE', '2008');
-/** ƒI[ƒi[ƒYƒXƒgƒA’ÊMƒGƒ‰[ƒR[ƒh */
+/** ã‚ªãƒ¼ãƒŠãƒ¼ã‚ºã‚¹ãƒˆã‚¢é€šä¿¡ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰ */
 define('OSTORE_E_C_PERMISSION', '2009');
-/** ƒI[ƒi[ƒYƒXƒgƒA’ÊMƒGƒ‰[ƒR[ƒh */
+/** ã‚ªãƒ¼ãƒŠãƒ¼ã‚ºã‚¹ãƒˆã‚¢é€šä¿¡ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰ */
 define('OSTORE_E_C_BATCH_ERR', '2010');
-/** ‚¨‹C‚É“ü‚è¤•i“o˜^(—LŒø:1 –³Œø:0) */
+/** ãŠæ°—ã«å…¥ã‚Šå•†å“ç™»éŒ²(æœ‰åŠ¹:1 ç„¡åŠ¹:0) */
 define('OPTION_FAVOFITE_PRODUCT','1');
-/** ‚¨‹C‚É“ü‚è¤•i‚ð•\Ž¦‚·‚éÛ‚ÉAÝŒÉ‚È‚µ¤•i‚Ì•\Ž¦E”ñ•\Ž¦(”ñ•\Ž¦:true •\Ž¦:false) */
+/** ãŠæ°—ã«å…¥ã‚Šå•†å“ã‚’è¡¨ç¤ºã™ã‚‹éš›ã«ã€åœ¨åº«ãªã—å•†å“ã®è¡¨ç¤ºãƒ»éžè¡¨ç¤º(éžè¡¨ç¤º:true è¡¨ç¤º:false) */
 define('NOSTOCK_HIDDEN', false);
-/** ‰æ‘œƒŠƒl[ƒ€Ý’èi¤•i‰æ‘œ‚Ì‚Ýj */
+/** ç”»åƒãƒªãƒãƒ¼ãƒ è¨­å®šï¼ˆå•†å“ç”»åƒã®ã¿ï¼‰ */
 define('IMAGE_RENAME', true);
-/*@CUORECUSTOM@START */
-/** 1:ŽÀ¤•i 2:ƒ_ƒEƒ“ƒ[ƒh */
+/** 1:å®Ÿå•†å“ 2:ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ */
 define('DEFAULT_PRODUCT_DOWN', 1);
-/** ƒ_ƒEƒ“ƒ[ƒh”Ì”„ƒtƒ@ƒCƒ‹—pƒTƒCƒY§ŒÀ(KB) */
+/** ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰è²©å£²ãƒ•ã‚¡ã‚¤ãƒ«ç”¨ã‚µã‚¤ã‚ºåˆ¶é™(KB) */
 define('DOWN_SIZE', 50000);
-/** ƒ_ƒEƒ“ƒ[ƒhƒtƒ@ƒCƒ‹ˆêŽž•Û‘¶ */
+/** ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ãƒ•ã‚¡ã‚¤ãƒ«ä¸€æ™‚ä¿å­˜ */
 define('DOWN_TEMP_DIR', DATA_PATH . "download/temp/");
-/** ƒ_ƒEƒ“ƒ[ƒhƒtƒ@ƒCƒ‹•Û‘¶æ */
+/** ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ãƒ•ã‚¡ã‚¤ãƒ«ä¿å­˜å…ˆ */
 define('DOWN_SAVE_DIR', DATA_PATH . "download/save/");
-/** ƒ_ƒEƒ“ƒ[ƒhƒtƒ@ƒCƒ‹‘¶ÝƒGƒ‰[ */
+/** ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ãƒ•ã‚¡ã‚¤ãƒ«å­˜åœ¨ã‚¨ãƒ©ãƒ¼ */
 define('DOWNFILE_NOT_FOUND', 22);
-/** “ú”Œ…” */
+/** æ—¥æ•°æ¡æ•° */
 define('DOWNLOAD_DAYS_LEN', 3);
-/** ƒ_ƒEƒ“ƒ[ƒh‰ñ”Œ…” */
+/** ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰å›žæ•°æ¡æ•° */
 define('DOWNLOAD_CNT_LEN', 3);
-/*@CUORECUSTOM@END */
 ?>

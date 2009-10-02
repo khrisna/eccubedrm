@@ -222,7 +222,6 @@
                                         <span class="red12"><!--{$arrErr.free_rule}--></span>
                                         <input type="text" name="free_rule" value="<!--{$arrForm.free_rule|escape}-->" maxlength="<!--{$smarty.const.PRICE_LEN}-->" size="6" class="box6" style="<!--{if $arrErr.free_rule != ""}-->background-color: <!--{$smarty.const.ERR_COLOR}--><!--{/if}-->" /> 円以上購入時無料</td>
                                     </tr>
-                                   <!--{* CUORECUSTOM　START *}-->
                                    <tr class="fs12n">
                                         <td bgcolor="#f2f1ec" width="180">ダウンロード<br>可能日数<span class="red"> *</span></td>
                                         <td bgcolor="#ffffff" width="537">
@@ -243,7 +242,6 @@
 -->
                                     <input type="hidden" name="max_download_cnt" value="" />
                                     <input type="hidden" name="download_cnt_unlimited" value="" />
-                                <!--{* CUORECUSTOM　END *}-->
                                 </table>
 
                                 <table width="678" border="0" cellspacing="0" cellpadding="0" summary=" ">

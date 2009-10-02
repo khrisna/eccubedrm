@@ -114,7 +114,6 @@ class SC_UploadFile {
         }
         return $objErr->arrErr[$keyname];
     }
-/*　CUORECUSTOM　START */
     // アップロードされたダウンロードファイルを保存する。
     function makeTempDownFile() {
         $objErr = new SC_CheckError();
@@ -145,7 +144,6 @@ class SC_UploadFile {
         }
         return $objErr->arrErr['down_file'];
     }
-/*　CUORECUSTOM　END */
     // 画像を削除する。
     function deleteFile($keyname) {
         $objImage = new SC_Image($this->temp_dir);
@@ -199,7 +197,6 @@ class SC_UploadFile {
             $cnt++;
         }
     }
-/*　CUORECUSTOM　START */    
     // 一時ファイルを保存ディレクトリに移す
     function moveTempDownFile() {
         $cnt = 0;
@@ -217,7 +214,6 @@ class SC_UploadFile {
             $cnt++;
         }
     }
-/*　CUORECUSTOM　END */
     // HIDDEN用のファイル名配列を返す
     function getHiddenFileList() {
         $cnt = 0;
@@ -249,7 +245,6 @@ class SC_UploadFile {
             $cnt++;
         }
     }
-/*　CUORECUSTOM　START */
     // フォームに渡す用のダウンロードファイル情報を返す
     function getFormDownFile() {
         $arrRet = "";
@@ -264,7 +259,6 @@ class SC_UploadFile {
         }
         return $arrRet;
     }
-/*　CUORECUSTOM　END */
     // フォームに渡す用のファイル情報配列を返す
     function getFormFileList($temp_url, $save_url, $real_size = false) {
         $arrRet = array();
@@ -323,14 +317,12 @@ class SC_UploadFile {
         }
         return $arrRet;
     }
-/*　CUORECUSTOM　START */
     // DBで保存されたダウンロードファイル名をセットする
     function setDBDownFile($arrVal) {
 		if(isset($arrVal['realfilename']) && $arrVal['realfilename'] != "") {
 			$this->save_file[0] = $arrVal['realfilename'];
 		}
     }
-/*　CUORECUSTOM　END */
     // DBで保存されたファイル名配列をセットする
     function setDBFileList($arrVal) {
         $cnt = 0;
@@ -352,7 +344,6 @@ class SC_UploadFile {
             $cnt++;
         }
     }
-/*　CUORECUSTOM　START */
     // DB上のダウンロードファイルの内削除要求があったファイルを削除する。
     function deleteDBDownFile($arrVal) {
         $objImage = new SC_Image($this->temp_dir);
@@ -364,7 +355,6 @@ class SC_UploadFile {
 		}
 
     }
-/*　CUORECUSTOM　END */
     // DB上のファイルの内削除要求があったファイルを削除する。
     function deleteDBFile($arrVal) {
         $objImage = new SC_Image($this->temp_dir);
