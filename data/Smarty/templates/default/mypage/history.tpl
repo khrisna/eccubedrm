@@ -43,9 +43,7 @@
       <tr>
         <th>商品コード</th>
         <th>商品名</th>
-<!--{* CUORECUSTOM　START *}-->
         <th>配送商品/ダウンロード</th>
-<!--{* CUORECUSTOM　END *}-->
         <th>単価</th>
         <th>個数</th>
         <th>小計</th>
@@ -54,7 +52,6 @@
       <tr>
         <td><!--{$arrDisp.product_code[cnt]|escape}--></td>
         <td><a href="<!--{$smarty.const.URL_DIR}-->products/detail.php?product_id=<!--{$arrDisp.product_id[cnt]}-->"><!--{$arrDisp.product_name[cnt]|escape}--></a></td>
-<!--{* CUORECUSTOM　START *}-->
         <td>
 <!--{ if $arrDisp.down[cnt] == "2"}-->
 	<!--{ if $arrDisp.price[cnt] == "0" || ( $arrDisp.status[cnt] >= "5" && $arrDisp.effective[cnt] == "1" )}-->
@@ -68,7 +65,6 @@
 		配送商品
 <!--{ /if }-->
         </td>
-<!--{* CUORECUSTOM　END *}-->
         <!--{assign var=price value=`$arrDisp.price[cnt]`}-->
         <!--{assign var=quantity value=`$arrDisp.quantity[cnt]`}-->
         <td class="pricetd"><!--{$price|escape|number_format}-->円</td>

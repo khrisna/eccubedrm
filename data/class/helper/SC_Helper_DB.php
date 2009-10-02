@@ -1557,7 +1557,6 @@ class SC_Helper_DB {
         }
         return false;
     }
-/*　CUORECUSTOM　START */
 	/**
 	 * カート内の商品の販売方法判定処理
 	 *
@@ -1590,6 +1589,5 @@ class SC_Helper_DB {
 		}
 		return $ret;
 	}
-/*　CUORECUSTOM　END */
 }
 ?>

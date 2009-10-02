@@ -76,9 +76,7 @@ class LC_Page_Shopping extends LC_Page {
         $objCampaignSess = new SC_CampaignSession();
         $objCustomer = new SC_Customer();
         $objCookie = new SC_Cookie();
-/*　CUORECUSTOM　START */
         $objDb = new SC_Helper_DB_Ex();
-/*　CUORECUSTOM　END */
         $this->objFormParam = new SC_FormParam();            // フォーム用
         $this->lfInitParam();                                // パラメータ情報の初期化
         $this->objFormParam->setParam($_POST);            // POST値の取得
@@ -87,10 +85,8 @@ class LC_Page_Shopping extends LC_Page {
         $uniqid = SC_Utils_Ex::sfCheckNormalAccess($objSiteSess, $objCartSess);
         $this->tpl_uniqid = $uniqid;
 
-/*　CUORECUSTOM　START */
 		//ダウンロード商品判定
 		$this->cartdown = $objDb->chkCartDown($objCartSess);
-/*　CUORECUSTOM　END */
 
         // ログインチェック
         if($objCustomer->isLoginSuccess()) {
@@ -143,12 +139,10 @@ class LC_Page_Shopping extends LC_Page {
             break;
         case 'nonmember':
             $this->lfSetNonMember($this);
-/*　CUORECUSTOM　START */
 			//非会員のダウンロード商品を含んだ買い物はNG
 			if($this->cartdown != 0){
 				SC_Utils_Ex::sfDispSiteError(FREE_ERROR_MSG, $objSiteSess, false, "ダウンロード商品を含むお買い物は、会員登録が必要です。<br/>お手数ですが、会員登録をお願いします。");
 			}
-/*　CUORECUSTOM　END */
             // ※breakなし
         default:
             if(isset($_GET['from']) && $_GET['from'] == 'nonmember') {

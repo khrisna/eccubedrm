@@ -81,7 +81,6 @@
                                     <!--{/section}-->
                                     </td>
                                 </tr>
-<!--{* CUORECUSTOM　START *}-->
                                 <tr>
                                     <td bgcolor="#f2f1ec" width="160" class="fs12n">実商品・ダウンロード</td>
                                     <td bgcolor="#ffffff" width="557" class="fs12n">
@@ -102,7 +101,18 @@
                                     <!--{/if}-->
                                     </td>
                                 </tr>
-<!--{* CUORECUSTOM　END *}-->
+                                <tr>
+                                    <td bgcolor="#f2f1ec" width="160" class="fs12n">DRMコンテンツID</td>
+                                    <td bgcolor="#ffffff" width="557" class="fs12n">
+                                    <!--{$arrForm.drm_contents_id|escape}-->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#f2f1ec" width="160" class="fs12n">DRMポリシID</td>
+                                    <td bgcolor="#ffffff" width="557" class="fs12n">
+                                    <!--{$arrForm.drm_policy_id|escape}-->
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td bgcolor="#f2f1ec" width="160" class="fs12n">公開・非公開</td>
                                     <td bgcolor="#ffffff" width="557" class="fs12n">

@@ -141,13 +141,11 @@ CREATE TABLE dtb_baseinfo (
     mypage_tpl text,
     good_traded text,
     message text,
-# CUORECUSTOM　START
     regular_holiday_ids text,
     downloadable_days numeric DEFAULT 30,
     downloadable_days_unlimited smallint,
     max_download_cnt numeric DEFAULT 5,
     download_cnt_unlimited smallint
-# CUORECUSTOM　END
 ) TYPE=InnoDB ;
 
 CREATE TABLE dtb_deliv (
@@ -282,11 +280,11 @@ CREATE TABLE dtb_products (
     sale_unlimited smallint DEFAULT 0,
     category_id int,
     rank int,
-# CUORECUSTOM　START
     down smallint NOT NULL ,
     filename text,
     realfilename text,
-# CUORECUSTOM　END
+    drm_contents_id int,
+    drm_policy_id int,
     status smallint NOT NULL DEFAULT 2,
     product_flag text,
     point_rate numeric,
@@ -1243,11 +1241,9 @@ CREATE TABLE mtb_constants (
     remarks text
 ) TYPE=InnoDB;
 
-# CUORECUSTOM　START
 CREATE TABLE mtb_down (
     id int2,
     name text,
     rank int2 NOT NULL,
     PRIMARY KEY (id)
 ) TYPE=InnoDB;
-# CUORECUSTOM　END

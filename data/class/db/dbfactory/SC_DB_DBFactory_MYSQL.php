@@ -275,12 +275,10 @@ class SC_DB_DBFactory_MYSQL extends SC_DB_DBFactory {
             "vw_cross_class" => '
                 (SELECT T1.class_id AS class_id1, T2.class_id AS class_id2, T1.classcategory_id AS classcategory_id1, T2.classcategory_id AS classcategory_id2, T1.name AS name1, T2.name AS name2, T1.rank AS rank1, T2.rank AS rank2
                 FROM dtb_classcategory AS T1, dtb_classcategory AS T2 ) ',
-/*　CUORECUSTOM　START */
             "vw_download_class" => '
                 (SELECT p.product_id AS product_id, p.realfilename AS realfilename, p.filename AS filename, od.order_id AS order_id, o.customer_id AS customer_id, o.create_date AS create_date FROM
                     dtb_products p, dtb_order_detail od, dtb_order o
                 WHERE p.product_id = od.product_id AND od.order_id = o.order_id AND 5 <= o.status ) ',
-/*　CUORECUSTOM　END */
             "vw_cross_products_class" =>'
                 (SELECT T1.class_id1, T1.class_id2, T1.classcategory_id1, T1.classcategory_id2, T2.product_id,
                 T1.name1, T1.name2, T2.product_code, T2.stock, T2.price01, T2.price02, T1.rank1, T1.rank2
@@ -347,11 +345,11 @@ class SC_DB_DBFactory_MYSQL extends SC_DB_DBFactory {
                     T1.update_date,
                     T1.note,
                     T1.deliv_date_id,
-/*　CUORECUSTOM　START */
                     T1.down,
                     T1.filename,
                     T1.realfilename,
-/*　CUORECUSTOM　END */
+                    T1.drm_contents_id,
+                    T1.drm_policy_id,
                     T2.product_id_sub,
                     T2.product_code,
                     T2.price01,
