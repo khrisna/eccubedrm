@@ -23,6 +23,7 @@
 
 // {{{ requires
 require_once(CLASS_PATH . "pages/LC_Page.php");
+require_once(CLASS_PATH . "pages/SC_DRM.php");
 
 /**
  * ご注文完了 のページクラス.
@@ -337,6 +338,16 @@ class LC_Page_Shopping_Complete extends LC_Page {
                 $this->lfRegistCampaignOrder($objQuery, $objCampaignSess, $order_id);
             }
         }
+
+		// DRM ライセンス発行
+		$order_email = $arrData['order_email'];
+		$arrRes = $this->objCartSess->getAllProductID();
+		$product_id = $arrRes[0];
+		$arrRes = $objQuery->getall("SELECT drm_contents_id, drm_policy_id FROM dtb_products WHERE product_id = ? ", array($product_id));
+		$content_id = $arrRes[0]["drm_contents_id"];
+		$policy_id = $arrRes[0]["drm_policy_id"];
+		$drm = new SC_DRM();
+		$drm->issueLicense($order_email, $content_id, $policy_id);
 
         // セッションカート内の商品を削除する。
         $this->objCartSess->delAllProducts();
