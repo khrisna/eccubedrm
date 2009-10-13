@@ -90,7 +90,16 @@ class LC_Page_Shopping extends LC_Page {
 
         // ログインチェック
         if($objCustomer->isLoginSuccess()) {
-            // すでにログインされている場合は、お届け先設定画面に転送
+			if($this->cartdown==2){
+				// 会員情報の住所を受注一時テーブルに書き込む
+				$objDb->sfRegistDelivData($uniqid, $objCustomer);
+				// 正常に登録されたことを記録しておく
+				$objSiteSess->setRegistFlag();
+				// ダウンロード商品有りの場合は、支払方法画面に転送
+				$this->sendRedirect($this->getLocation("./payment.php"), array());
+				exit;
+			}
+        	// すでにログインされている場合は、お届け先設定画面に転送
             $this->sendRedirect($this->getLocation("./deliv.php"), array());
             exit;
         }
@@ -224,6 +233,16 @@ class LC_Page_Shopping extends LC_Page {
         $uniqid = SC_Utils_Ex::sfCheckNormalAccess($objSiteSess, $objCartSess);
 
         $this->tpl_uniqid = $uniqid;
+
+		//ダウンロード商品判定
+		$this->cartdown = $objDb->chkCartDown($objCartSess);
+
+		// 商品タイプチェック
+		if( $this->cartdown != 0 ){
+			// ダウンロード商品が１つでも注文されている場合
+			$_SESSION["error"] = "ダウンロード商品はモバイルからはお買い上げ頂く事はできません。";
+			$this->sendRedirect($this->getLocation("./../cart/index.php"), true);
+		}
 
         // ログインチェック
         if($objCustomer->isLoginSuccess(true)) {
