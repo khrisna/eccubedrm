@@ -144,8 +144,10 @@ function selectAll(target) {
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td bgcolor="#f2f1ec" width="160" class="fs12n">実商品・ダウンロード<span class="red"> *</span></td>
-                                        <td bgcolor="#ffffff" width="557" class="fs12n"><input type="radio" name="down" value="1" <!--{if $arrForm.down == "1"}-->checked<!--{/if}-->/>実商品　<input type="radio" name="down" value="2" <!--{if $arrForm.down == "2"}-->checked<!--{/if}--> />ダウンロード</td>
+                                        <td bgcolor="#f2f1ec" width="160" class="fs12n">実商品・ダウンロード(DRM無)・ダウンロード(DRM有)<span class="red"> *</span></td>
+                                        <td bgcolor="#ffffff" width="557" class="fs12n"><input type="radio" name="down" value="1" <!--{if $arrForm.down == "1"}-->checked<!--{/if}-->/>実商品
+                                        &nbsp;<input type="radio" name="down" value="2" <!--{if $arrForm.down == "2"}-->checked<!--{/if}--> />ダウンロード(DRM無)
+                                        &nbsp;<input type="radio" name="down" value="3" <!--{if $arrForm.down == "3"}-->checked<!--{/if}--> />ダウンロード(DRM有)</td>
                                     </tr>
                                     <tr>
                                         <td bgcolor="#f2f1ec" width="160" class="fs12n">ダウンロードファイル名</td>

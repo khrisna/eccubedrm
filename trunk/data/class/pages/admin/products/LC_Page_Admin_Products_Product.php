@@ -606,15 +606,19 @@ class LC_Page_Admin_Products_Product extends LC_Page {
         $objErr->doFunc(array("検索ワード", "comment3", LLTEXT_LEN), array("SPTAB_CHECK", "MAX_LENGTH_CHECK"));
         $objErr->doFunc(array("メーカーURL", "comment1", URL_LEN), array("SPTAB_CHECK", "URL_CHECK", "MAX_LENGTH_CHECK"));
         $objErr->doFunc(array("発送日目安", "deliv_date_id", INT_LEN), array("NUM_CHECK"));
-        //ダウンロード商品チェック
-        if($array['down'] == "2") {
-        	$objErr->doFunc(array("ダウンロードファイル名", "filename", STEXT_LEN), array("EXIST_CHECK", "SPTAB_CHECK", "MAX_LENGTH_CHECK"));
+
+		//ダウンロード商品チェック(DRM有)
+		if($array['down'] == "3") {
+			$objErr->doFunc(array("DRMコンテンツID", "drm_contents_id", INT_LEN), array("EXIST_CHECK","NUM_CHECK"));
+			$objErr->doFunc(array("DRMポリシID", "drm_policy_id", INT_LEN), array("EXIST_CHECK","NUM_CHECK"));
+		}
+		//ダウンロード商品チェック(DRM有/無)
+		if($array['down'] != "1") {
+			$objErr->doFunc(array("ダウンロードファイル名", "filename", STEXT_LEN), array("EXIST_CHECK", "SPTAB_CHECK", "MAX_LENGTH_CHECK"));
 			if($array['realfilename'] == "") {
 				$objErr->arrErr['realfilename'] = "※ ダウンロード商品の場合はダウンロード商品用ファイルをアップロードしてください。<br />";
 			}
-			$objErr->doFunc(array("DRMコンテンツID", "drm_contents_id", INT_LEN), array("EXIST_CHECK","NUM_CHECK"));
-			$objErr->doFunc(array("DRMポリシID", "drm_policy_id", INT_LEN), array("EXIST_CHECK","NUM_CHECK"));
-        }
+		}
 		//実商品チェック
 		if($array['down'] == "1") {
 			if($array['filename'] != "") {
@@ -623,13 +627,17 @@ class LC_Page_Admin_Products_Product extends LC_Page {
 			if($array['realfilename'] != "") {
 				$objErr->arrErr['realfilename'] = "※ 実商品の場合はダウンロード商品用ファイルをアップロードできません。<br />ファイルを取り消してください。<br />";
 			}
+		}
+		//実商品、ダウンロード商品(DRM無)チェック
+		if($array['down'] != "3") {
 			if($array['drm_contents_id'] != "") {
-				$objErr->arrErr['drm_contents_id'] = "※ 実商品の場合はDRMコンテンツIDを設定できません。<br />";
+				$objErr->arrErr['drm_contents_id'] = "※ ダウンロード(DRM 有)以外はDRMコンテンツIDを設定できません。<br />";
 			}
 			if($array['drm_policy_id'] != "") {
-				$objErr->arrErr['drm_policy_id'] = "※ 実商品の場合はDRMポリシIDを設定できません。<br />";
+				$objErr->arrErr['drm_policy_id'] = "※ ダウンロード(DRM 有)以外はDRMポリシIDを設定できません。<br />";
 			}
 		}
+
         if($this->tpl_nonclass) {
             $objErr->doFunc(array("商品コード", "product_code", STEXT_LEN), array("EXIST_CHECK", "SPTAB_CHECK","MAX_LENGTH_CHECK"));
             $objErr->doFunc(array("通常価格", "price01", PRICE_LEN), array("ZERO_CHECK", "SPTAB_CHECK", "NUM_CHECK", "MAX_LENGTH_CHECK"));

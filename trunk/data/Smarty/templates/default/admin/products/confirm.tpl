@@ -82,7 +82,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td bgcolor="#f2f1ec" width="160" class="fs12n">実商品・ダウンロード</td>
+                                    <td bgcolor="#f2f1ec" width="160" class="fs12n">実商品/<BR/>ダウンロード(DRM無)/<BR/>ダウンロード(DRM有)</td>
                                     <td bgcolor="#ffffff" width="557" class="fs12n">
                                     <!--{$arrDown[$arrForm.down]}-->
                                     </td>

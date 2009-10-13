@@ -53,7 +53,7 @@
         <td><!--{$arrDisp.product_code[cnt]|escape}--></td>
         <td><a href="<!--{$smarty.const.URL_DIR}-->products/detail.php?product_id=<!--{$arrDisp.product_id[cnt]}-->"><!--{$arrDisp.product_name[cnt]|escape}--></a></td>
         <td>
-<!--{ if $arrDisp.down[cnt] == "2"}-->
+<!--{ if $arrDisp.down[cnt] != "1"}-->
 	<!--{ if $arrDisp.price[cnt] == "0" || ( $arrDisp.status[cnt] >= "5" && $arrDisp.effective[cnt] == "1" )}-->
 		<a target="_self" href="<!--{$smarty.const.URL_DIR}-->mypage/download.php?order_id=<!--{$arrDisp.order_id}-->&product_id=<!--{$arrDisp.product_id[cnt]}-->">ダウンロード</a>
 	<!--{ elseif $arrDisp.status[cnt] < "5"}-->

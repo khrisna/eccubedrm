@@ -1573,7 +1573,7 @@ class SC_Helper_DB {
 			//カート内のIDから販売方法を取得
 			foreach ($arrID as $rec) {
 				$arrRet = $objQuery->select("down", "dtb_products", "product_id = " . $rec);
-				if ($arrRet[0]['down'] == "2"){
+				if ($arrRet[0]['down'] != "1"){
 					$down = true;
 				}else{
 					$nodown = true;
