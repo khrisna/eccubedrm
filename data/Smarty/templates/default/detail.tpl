@@ -87,7 +87,7 @@ function lnSetSelect(form, name1, name2, val) {
         <!--{/section}-->
       </ul>
       <!--{/if}-->
-<!--{if $arrProduct.down == 2}-->
+<!--{if $arrProduct.down != 1}-->
 		<div><font color="red">本商品はダウンロード販売となります。<br /> 購入後はMYページの購入履歴からダウンロード可能です。</font></div><br />
 <!--{/if}-->
       <!--★商品コード★-->

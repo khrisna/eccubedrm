@@ -1128,6 +1128,7 @@ INSERT INTO mtb_constants VALUES ('DOWN_SAVE_DIR','DATA_PATH . "download/save/"'
 INSERT INTO mtb_constants VALUES ('DOWNFILE_NOT_FOUND','22',606,'ダウンロードファイル存在エラー');
 
 INSERT INTO mtb_down VALUES ('1','実商品','0');
-INSERT INTO mtb_down VALUES ('2','ダウンロード','1');
+INSERT INTO mtb_down VALUES ('2','ダウンロード(DRM 無)','1');
+INSERT INTO mtb_down VALUES ('3','ダウンロード(DRM 有)','2');
 
 INSERT INTO dtb_module (module_id,module_code,module_name,update_date,create_date)values(0,0,'patch',now(),now());
