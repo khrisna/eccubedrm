@@ -10,6 +10,23 @@ CREATE VIEW vw_cross_class as
        FROM dtb_classcategory AS T1,
             dtb_classcategory AS T2;
 
+CREATE VIEW vw_download_class as
+     SELECT
+          p.product_id AS product_id,
+          p.realfilename AS realfilename,
+          p.filename AS filename,
+          od.order_id AS order_id,
+          o.customer_id AS customer_id,
+          o.create_date AS create_date,
+          o.status AS status
+     FROM
+          dtb_products p,
+          dtb_order_detail od,
+          dtb_order o
+     WHERE
+          p.product_id = od.product_id AND
+          od.order_id = o.order_id;
+
 CREATE VIEW vw_cross_products_class AS
      SELECT T1.class_id1,
             T1.class_id2,
@@ -168,6 +185,7 @@ CREATE VIEW vw_products_allclass_detail AS
             sale_unlimited,
             file1,file2,
             category_id
+            ,down
       FROM (dtb_products AS T1
   RIGHT JOIN
      (SELECT

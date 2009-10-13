@@ -100,3 +100,4 @@ DROP TABLE dtb_module;
 DROP TABLE dtb_session;
 DROP TABLE dtb_site_control;
 DROP TABLE dtb_trackback;
+DROP TABLE dtb_customer_favorite_products;

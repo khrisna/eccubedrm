@@ -63,6 +63,11 @@ class LC_Page_Mypage_DownLoad extends LC_Page {
         	//DBから商品情報の読込
 			$arrForm = $this->lfGetRealFileName($_GET['product_id']);
 
+			//ステータスが支払済み以上である事
+			if ($arrForm["status"] < ORDER_DELIV){
+                SC_Utils_Ex::sfDispSiteError(DOWNFILE_NOT_FOUND,"",true);
+			}
+
 			//ファイル情報が無い場合はNG
 			if ($arrForm["realfilename"] == "" ){
                 SC_Utils_Ex::sfDispSiteError(DOWNFILE_NOT_FOUND,"",true);
@@ -98,8 +103,16 @@ class LC_Page_Mypage_DownLoad extends LC_Page {
         $objQuery = new SC_Query();
         $col = "*";
         $table = "vw_download_class AS T1";
+// CUSTOM FOR MYSQL START
         $where = "T1.customer_id = " . (int)$_SESSION['customer']['customer_id'] . " AND T1.order_id = " . (int)$_GET['order_id'] . " AND T1.product_id = " . (int)$_GET['product_id'] .
         	" AND (SELECT IF((SELECT d1.downloadable_days_unlimited FROM dtb_baseinfo d1)=1, 1, DATE(NOW()) <= DATE(DATE_ADD(T1.create_date, INTERVAL (SELECT downloadable_days FROM dtb_baseinfo) DAY)))) = 1;";
+// CUSTOM FOR MYSQL END
+// CUSTOM FOR POSTGRESQL START
+//        $baseinfo = SC_Helper_DB_Ex::sf_getBasisData();
+//        $where = "T1.customer_id = " . (int)$_SESSION['customer']['customer_id'] . " AND T1.order_id = " . (int)$_GET['order_id'] . " AND T1.product_id = " . (int)$_GET['product_id'] .
+//        	" AND (SELECT CASE WHEN (SELECT d1.downloadable_days_unlimited FROM dtb_baseinfo d1) = 1 THEN 1 WHEN DATE(NOW()) <= DATE(T1.create_date + '". $baseinfo['downloadable_days'] ." days') THEN 1 ELSE 0 END) = 1;";
+// CUSTOM FOR POSTGRESQL END
+
         $arrRet = $objQuery->select($col, $table, $where);
 
         return $arrRet[0];
