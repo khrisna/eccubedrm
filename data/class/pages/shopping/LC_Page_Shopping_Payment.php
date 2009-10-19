@@ -88,6 +88,9 @@ class LC_Page_Shopping_Payment extends LC_Page {
         // ユニークIDを引き継ぐ
         $this->tpl_uniqid = $uniqid;
 
+		//ダウンロード商品判定
+		$this->cartdown =$objDb->chkCartDown($objCartSess);
+
         // 会員ログインチェック
         if($this->objCustomer->isLoginSuccess()) {
             $this->tpl_login = '1';
@@ -349,11 +352,21 @@ class LC_Page_Shopping_Payment extends LC_Page {
     function lfGetPayment($total_pretax) {
         $objQuery = new SC_Query();
         $objQuery->setorder("rank DESC");
+        //ダウンロード商品無
+        if($this->cartdown != 0){
+			//クレジット以外は選択できない。
+			$where = $where . " payment_id =  " . CREDIT_PAYMENT .  " AND ";
+        }
+        $where = $where . " deliv_id IN (SELECT deliv_id FROM dtb_deliv WHERE del_flg = 0) ";
         //削除されていない支払方法を取得
-        $arrRet = $objQuery->select("payment_id, payment_method, rule, upper_rule, note, payment_image", "dtb_payment", "del_flg = 0 AND deliv_id IN (SELECT deliv_id FROM dtb_deliv WHERE del_flg = 0) ");
+        $arrRet = $objQuery->select("payment_id, payment_method, rule, upper_rule, note, payment_image", "dtb_payment", $where);
         //利用条件から支払可能方法を判定
         foreach($arrRet as $data) {
-            //下限と上限が設定されている
+        	//ダウンロード販売に対する注意
+        	if($this->cartdown != 0){
+        		$data['payment_method'] = $data['payment_method'] . "　　（ダウンロード商品を含む場合、クレジットのみ）";
+        	}
+        	//下限と上限が設定されている
             if($data['rule'] > 0 && $data['upper_rule'] > 0) {
                 if($data['rule'] <= $total_pretax && $data['upper_rule'] >= $total_pretax) {
                     $arrPayment[] = $data;
