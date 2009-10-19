@@ -686,4 +686,6 @@ define('DOWNFILE_NOT_FOUND', 22);
 define('DOWNLOAD_DAYS_LEN', 3);
 /** ダウンロード回数桁数 */
 define('DOWNLOAD_CNT_LEN', 3);
+/** 支払方法　クレジットpayment_idを指定 */
+define('CREDIT_PAYMENT', 5);
 ?>

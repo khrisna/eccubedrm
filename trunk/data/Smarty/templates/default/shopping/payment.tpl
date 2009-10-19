@@ -62,7 +62,7 @@
           <!--{/section}-->
         </table>
       </div>
-
+<!--{if $cartdown != "2"}-->
       <div class="payarea02">
         <h3><img src="<!--{$TPL_DIR}-->img/shopping/subtitle02.gif" width="670" height="33" alt="お届け時間の指定" /></h3>
         <p>ご希望の方は、お届け時間を選択してください。</p>
@@ -88,7 +88,7 @@
           </select>
          </div>
       </div>
-
+<!--{/if}-->
       <div class="payarea02">
         <h3><img src="<!--{$TPL_DIR}-->img/shopping/subtitle03.gif" width="670" height="33" alt="その他お問い合わせ" /></h3>
         <p>その他お問い合わせ事項がございましたら、こちらにご入力ください。</p>
