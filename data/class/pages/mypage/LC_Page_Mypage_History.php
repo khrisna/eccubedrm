@@ -205,26 +205,26 @@ class LC_Page_Mypage_History extends LC_Page {
     // 受注詳細データの取得
     function lfGetOrderDetail($order_id) {
         $objQuery = new SC_Query();
-// CUSTOM FOR MYSQL START
-        $col = "od.product_id AS product_id, od.product_code AS product_code, od.product_name AS product_name, od.classcategory_name1 AS classcategory_name1,
+        if (DB_TYPE == "mysql"){
+			// CUSTOM FOR MYSQL
+			$col = "od.product_id AS product_id, od.product_code AS product_code, od.product_name AS product_name, od.classcategory_name1 AS classcategory_name1,
 od.classcategory_name2 AS classcategory_name2, od.price AS price, od.quantity AS quantity, od.point_rate AS point_rate,
 o.status AS status, p.down AS down, (SELECT IF((SELECT d1.downloadable_days_unlimited FROM dtb_baseinfo d1)=1, 1, DATE(NOW()) <= DATE(DATE_ADD(o.create_date, INTERVAL (SELECT downloadable_days FROM dtb_baseinfo) DAY)))) AS effective";
 
-        $where = "p.product_id = od.product_id AND od.order_id = o.order_id AND od.order_id = ?";
-        $objQuery->setorder("classcategory_id1, classcategory_id2");
-        $arrRet = $objQuery->select($col, "dtb_products p, dtb_order_detail od, dtb_order o", $where, array($order_id));
-// CUSTOM FOR MYSQL END
-// CUSTOM FOR POSTGRESQL START
-//        $baseinfo = SC_Helper_DB_Ex::sf_getBasisData();
-//        $col = "od.product_id AS product_id, od.product_code AS product_code, od.product_name AS product_name, od.classcategory_name1 AS classcategory_name1,
-//od.classcategory_name2 AS classcategory_name2, od.price AS price, od.quantity AS quantity, od.point_rate AS point_rate,
-//o.status AS status, p.down AS down, (SELECT CASE WHEN (SELECT d1.downloadable_days_unlimited FROM dtb_baseinfo d1) = 1 THEN 1 WHEN DATE(NOW()) <= DATE(o.create_date + '". $baseinfo['downloadable_days'] ." days') THEN 1 ELSE 0 END) AS effective";
-//
-//        $where = "p.product_id = od.product_id AND od.order_id = o.order_id AND od.order_id = ?";
-//        $objQuery->setorder("classcategory_id1, classcategory_id2");
-//        $arrRet = $objQuery->select($col, "dtb_products p, dtb_order_detail od, dtb_order o", $where, array($order_id));
-// CUSTOM FOR POSTGRESQL END
+			$where = "p.product_id = od.product_id AND od.order_id = o.order_id AND od.order_id = ?";
+			$objQuery->setorder("classcategory_id1, classcategory_id2");
+			$arrRet = $objQuery->select($col, "dtb_products p, dtb_order_detail od, dtb_order o", $where, array($order_id));
+		}else{
+			// CUSTOM FOR POSTGRESQL
+			$baseinfo = SC_Helper_DB_Ex::sf_getBasisData();
+			$col = "od.product_id AS product_id, od.product_code AS product_code, od.product_name AS product_name, od.classcategory_name1 AS classcategory_name1,
+od.classcategory_name2 AS classcategory_name2, od.price AS price, od.quantity AS quantity, od.point_rate AS point_rate,
+o.status AS status, p.down AS down, (SELECT CASE WHEN (SELECT d1.downloadable_days_unlimited FROM dtb_baseinfo d1) = 1 THEN 1 WHEN DATE(NOW()) <= DATE(o.create_date + '". $baseinfo['downloadable_days'] ." days') THEN 1 ELSE 0 END) AS effective";
 
+			$where = "p.product_id = od.product_id AND od.order_id = o.order_id AND od.order_id = ?";
+			$objQuery->setorder("classcategory_id1, classcategory_id2");
+			$arrRet = $objQuery->select($col, "dtb_products p, dtb_order_detail od, dtb_order o", $where, array($order_id));
+		}
         return $arrRet;
     }
 }

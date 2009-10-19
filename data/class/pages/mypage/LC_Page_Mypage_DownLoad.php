@@ -103,15 +103,16 @@ class LC_Page_Mypage_DownLoad extends LC_Page {
         $objQuery = new SC_Query();
         $col = "*";
         $table = "vw_download_class AS T1";
-// CUSTOM FOR MYSQL START
-        $where = "T1.customer_id = " . (int)$_SESSION['customer']['customer_id'] . " AND T1.order_id = " . (int)$_GET['order_id'] . " AND T1.product_id = " . (int)$_GET['product_id'] .
-        	" AND (SELECT IF((SELECT d1.downloadable_days_unlimited FROM dtb_baseinfo d1)=1, 1, DATE(NOW()) <= DATE(DATE_ADD(T1.create_date, INTERVAL (SELECT downloadable_days FROM dtb_baseinfo) DAY)))) = 1;";
-// CUSTOM FOR MYSQL END
-// CUSTOM FOR POSTGRESQL START
-//        $baseinfo = SC_Helper_DB_Ex::sf_getBasisData();
-//        $where = "T1.customer_id = " . (int)$_SESSION['customer']['customer_id'] . " AND T1.order_id = " . (int)$_GET['order_id'] . " AND T1.product_id = " . (int)$_GET['product_id'] .
-//        	" AND (SELECT CASE WHEN (SELECT d1.downloadable_days_unlimited FROM dtb_baseinfo d1) = 1 THEN 1 WHEN DATE(NOW()) <= DATE(T1.create_date + '". $baseinfo['downloadable_days'] ." days') THEN 1 ELSE 0 END) = 1;";
-// CUSTOM FOR POSTGRESQL END
+		if (DB_TYPE == "mysql"){
+			// CUSTOM FOR MYSQL
+			$where = "T1.customer_id = " . (int)$_SESSION['customer']['customer_id'] . " AND T1.order_id = " . (int)$_GET['order_id'] . " AND T1.product_id = " . (int)$_GET['product_id'] .
+			" AND (SELECT IF((SELECT d1.downloadable_days_unlimited FROM dtb_baseinfo d1)=1, 1, DATE(NOW()) <= DATE(DATE_ADD(T1.create_date, INTERVAL (SELECT downloadable_days FROM dtb_baseinfo) DAY)))) = 1;";
+		}else{
+			// CUSTOM FOR POSTGRESQL
+			$baseinfo = SC_Helper_DB_Ex::sf_getBasisData();
+			$where = "T1.customer_id = " . (int)$_SESSION['customer']['customer_id'] . " AND T1.order_id = " . (int)$_GET['order_id'] . " AND T1.product_id = " . (int)$_GET['product_id'] .
+			" AND (SELECT CASE WHEN (SELECT d1.downloadable_days_unlimited FROM dtb_baseinfo d1) = 1 THEN 1 WHEN DATE(NOW()) <= DATE(T1.create_date + '". $baseinfo['downloadable_days'] ." days') THEN 1 ELSE 0 END) = 1;";
+		}
 
         $arrRet = $objQuery->select($col, $table, $where);
 
